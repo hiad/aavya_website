@@ -1,0 +1,110 @@
+// ======================================================
+// Accordian
+// ======================================================
+
+
+
+ .accordion {
+	.box-accordian{padding: 10px 0;
+		&:not(:first-child){border-top: solid 1px #efefef;}
+	}
+	.accordion-header {
+		color: $primary;
+		cursor: pointer;
+		font-weight: 700;
+		padding:20px 0 20px 70px;
+		font-size: 20px;position: relative;
+        @include media-breakpoint-down(md){font-size: 18px;}
+        @include media-breakpoint-down(sm){font-size: 14px;padding:10px 0 10px 45px;}
+		&::before {
+			position: absolute;left: 0;top: 50%;margin-top:-20px;
+			content:"";
+			font-size: 1.2rem;
+			font-family:"Ionicons";
+			vertical-align: 0;
+			display: inline-block;
+			width: 40px;height:40px;line-height: 36px;text-align: center;color:$secondary;border: solid 2px $secondary;border-radius:50%;
+			@include media-breakpoint-down(sm){
+				width: 30px;height:30px;line-height: 26px;
+				font-size: 1rem;margin-top:-15px;
+			}
+		}
+		&.active{
+			&::before {
+				content:"";
+			}
+		}
+	}	
+	.accordion-content {
+		display: none;
+		padding:0 0 15px 70px;
+		color: $secondary;
+		@include media-breakpoint-down(sm){padding:0 0 10px 45px;}
+	}
+}
+
+
+// ======================================================
+// Tabs
+// ======================================================
+
+
+
+.nav-tabs {
+    .nav-link.active {
+        color: $primary;
+    }
+}
+
+.tab-pane {
+	display: none;
+    &.show {
+        display: block;
+    }
+}
+
+
+// ======================================================
+// Modal (popup)
+// ======================================================
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: .5s ease;
+	z-index: -1;
+}
+
+.overlay.active {
+	opacity: 1;
+	z-index: 2;
+}
+
+.modal {
+	max-height: calc(100% - 100px);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	max-width: 450px;
+	transform: translate(-50%, -50%);
+	color: #4a5666;
+	background: $white;
+	z-index: 3;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s ease;
+}
+
+.modal.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+.btn-close{
+    font-size: 46px;
+}

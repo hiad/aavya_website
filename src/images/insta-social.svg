@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1ca1fd"/>
+      <stop offset="1" stop-color="#89c1e7"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_77" data-name="Rectangle 77" width="22" height="22" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="insta-social" clip-path="url(#clip-path)">
+    <g id="_002-instagram" data-name="002-instagram">
+      <g id="Group_71" data-name="Group 71">
+        <g id="Group_70" data-name="Group 70">
+          <path id="Path_37" data-name="Path 37" d="M15.125,0H6.875A6.876,6.876,0,0,0,0,6.875v8.25A6.876,6.876,0,0,0,6.875,22h8.25A6.876,6.876,0,0,0,22,15.125V6.875A6.876,6.876,0,0,0,15.125,0Zm4.813,15.125a4.818,4.818,0,0,1-4.812,4.813H6.875a4.818,4.818,0,0,1-4.812-4.812V6.875A4.818,4.818,0,0,1,6.875,2.063h8.25a4.818,4.818,0,0,1,4.813,4.813Z" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <g id="Group_73" data-name="Group 73" transform="translate(5.5 5.5)">
+        <g id="Group_72" data-name="Group 72">
+          <path id="Path_38" data-name="Path 38" d="M11,5.5A5.5,5.5,0,1,0,16.5,11,5.5,5.5,0,0,0,11,5.5Zm0,8.938A3.438,3.438,0,1,1,14.438,11,3.442,3.442,0,0,1,11,14.438Z" transform="translate(-5.5 -5.5)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <g id="Group_75" data-name="Group 75" transform="translate(16.18 4.355)">
+        <g id="Group_74" data-name="Group 74">
+          <circle id="Ellipse_82" data-name="Ellipse 82" cx="0.733" cy="0.733" r="0.733" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
