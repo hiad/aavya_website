@@ -1,4 +1,11 @@
 import React from "react"
+import fb from '../images/fb-social.svg';
+import insta from '../images/insta-social.svg';
+import twit from '../images/twit-social.svg';
+import shopify from '../images/foot-shopify.png';
+import klaviyo from '../images/foot-klaviyo.png';
+import footInsta from '../images/foot-insta.png';
+import footfb from '../images/foot-fb.png';
 
 const Footer = () => (
       <footer class="pt-3 pt-md-4">
@@ -9,10 +16,10 @@ const Footer = () => (
                                     <a href="#" class="d-inline-block mb-2"><img src="images/Aavya.svg" alt="" /></a>
                                     <p class="mb-0 mb-md-1">Etiam convallis elementum sapien, a aliquam turpis aliquam vitae. Praesent sollicitudin felis vel mi facilisis posuere.</p>
                                     <ul class="logo-list d-flex d-md-block align-items-center">
-                                          <li><a href="#"><img src="images/foot-shopify.png" alt="" /></a></li>
-                                          <li><a href="#"><img src="images/foot-klaviyo.png" alt="" /></a></li>
-                                          <li><a href="#"><img src="images/foot-insta.png" alt="" /></a></li>
-                                          <li><a href="#"><img src="images/foot-fb.png" alt="" /></a></li>
+                                          <li><a href="#"><img src={shopify} alt="" /></a></li>
+                                          <li><a href="#"><img src={klaviyo} alt="" /></a></li>
+                                          <li><a href="#"><img src={footInsta} alt="" /></a></li>
+                                          <li><a href="#"><img src={footfb} alt="" /></a></li>
                                     </ul>
                               </div>
                         </div>
@@ -65,17 +72,17 @@ const Footer = () => (
                                                       <ul class="nav">
                                                             <li>
                                                                   <a href="#">
-                                                                        <img src="images/fb-social.svg" alt="" />
+                                                                        <img src={fb} alt="" />
                                                                   </a>
                                                             </li>
                                                             <li>
                                                                   <a href="#">
-                                                                        <img src="images/insta-social.svg" alt="" />
+                                                                        <img src={insta} alt="" />
                                                                   </a>
                                                             </li>
                                                             <li>
                                                                   <a href="#">
-                                                                        <img src="images/twit-social.svg" alt="" />
+                                                                        <img src={twit} alt="" />
                                                                   </a>
                                                             </li>
                                                       </ul>
