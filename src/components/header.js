@@ -1,5 +1,6 @@
 import React from "react"
 import ImageLogo from '../images/Aavya.svg';
+import { Link } from "gatsby";
 
 const Header = () => (
   <header>
@@ -11,21 +12,21 @@ const Header = () => (
         <div className="menu-burger d-block d-lg-none"></div>
         <nav className="mx-auto">
           <ul className="nav">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Solutions <span className="caret"></span></a>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="#">Solutions </Link>
             </li>
-            <li><a href="#">Case Studies <span className="caret"></span></a>
+            <li><Link to="#">Case Studies </Link>
             </li>
-            <li><a href="#">Client</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><Link to="#">Client</Link></li>
+            <li><Link to="#">Contact</Link></li>
             <li className="d-block d-lg-none"><a href="#">help</a></li>
-            <li className="d-block d-lg-none"><a href="#">EN <span className="caret"></span></a></li>
+            <li className="d-block d-lg-none"><a href="#">EN </a></li>
           </ul>
         </nav>
         <div className="act ml-auto ml-lg-0">
           <ul className="nav align-items-center">
             <li className="d-none d-lg-block"><a href="#">help</a></li>
-            <li><a href="#" className="req-btn">Request Consultation</a></li>
+            <li><Link href="#" className="req-btn">Request Consultation</Link></li>
             <li className="d-none d-lg-block"><a href="#">EN <span className="caret"></span></a></li>
           </ul>
         </div>

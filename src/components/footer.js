@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby";
 import fb from '../images/fb-social.svg';
 import insta from '../images/insta-social.svg';
 import twit from '../images/twit-social.svg';
@@ -30,28 +31,28 @@ const Footer = () => (
                                                 <div class="link-list mb-15 mb-lg-0 px-xl-15">
                                                       <h6 class="footer-title mb-12 mb-lg-25">Get in Touch <span class="caret"></span></h6>
                                                       <ul class="footer_link">
-                                                            <li><a href="#">About</a></li>
-                                                            <li><a href="#">Career</a></li>
-                                                            <li><a href="#">Services</a></li>
-                                                            <li><a href="#">How we Excel</a></li>
+                                                            <li><Link to="/about">About</Link></li>
+                                                            <li><Link to="/careers">Career</Link></li>
+                                                            <li><Link to="/services">Services</Link></li>
+                                                            <li><Link to="#">How we Excel</Link></li>
                                                       </ul>
                                                 </div>
                                                 <div class="link-list mb-15 mb-lg-0 px-xl-15">
                                                       <h6 class="footer-title mb-15 mb-lg-25">Know More <span class="caret"></span></h6>
                                                       <ul class="footer_link">
-                                                            <li><a href="#">Partners</a></li>
-                                                            <li><a href="#">Clients</a></li>
-                                                            <li><a href="#">App</a></li>
-                                                            <li><a href="#">Testimonials</a></li>
+                                                            <li><Link to='/'>Partners</Link></li>
+                                                            <li><Link to=''>Clients</Link></li>
+                                                            <li><Link to=''>App</Link></li>
+                                                            <li><Link to=''>Testimonials</Link></li>
                                                       </ul>
                                                 </div>
                                                 <div class="link-list mb-15 mb-lg-0 px-xl-15">
                                                       <h6 class="footer-title mb-15 mb-lg-25">Legal <span class="caret"></span></h6>
                                                       <ul class="footer_link">
-                                                            <li><a href="#">Privacy Policy</a></li>
-                                                            <li><a href="#">NDA's</a></li>
-                                                            <li><a href="#">Terms & Conditions</a></li>
-                                                            <li><a href="#">Cookie Policy</a></li>
+                                                            <li><Link to=''>Privacy Policy</Link></li>
+                                                            <li><Link to=''>NDA's</Link></li>
+                                                            <li><Link to=''>Terms & Conditions</Link></li>
+                                                            <li><Link to=''>Cookie Policy</Link></li>
                                                       </ul>
                                                 </div>
                                           </div>
