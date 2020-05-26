@@ -1,8 +1,15 @@
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
+
+
+require('dotenv').config({
+  path: `.env.${activeEnv}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Avvya`,
+    description: ``,
+    author: `@hiad99`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +33,13 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'rz477be2kwhw',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
