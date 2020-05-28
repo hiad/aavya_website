@@ -266,7 +266,6 @@ const sections = {
                                                                               <div class="log-img mb-15 mb-lg-25">
                                                                                     <img src={logo[0].file.url} class="" alt="" />
                                                                               </div>
-                                                                              <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
                                                                               <p class="mb-1 mb-md-0">{description}</p></div>
                                                                               <a href="https://aavya.kinsta.cloud/our-case-studies/" class="btn btn-primary d-none d-md-inline-block">Read Case Study</a>
                                                                   </div>
@@ -286,7 +285,6 @@ const sections = {
                                                                                           <div class="log-img mb-15 mb-lg-25">
                                                                                                 <img src={logo[0].file.url} class="" alt="" />
                                                                                           </div>
-                                                                                          <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
                                                                                           <p class="mb-1 mb-md-0">{description}</p></div>
                                                                                     <Link to="/case" class="btn btn-primary d-none d-md-inline-block">Read Case Study</Link>
                                                                               </div></>
