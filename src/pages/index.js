@@ -3,12 +3,19 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Slider, sections } from '../utils/home';
 import Layout from "../components/layout";
 
-const gettingHomeJSX = ({ allContentfulSections, allContentfulCaseStudies }) => {
+const gettingHomeJSX = ({
+  allContentfulSections,
+  allContentfulCaseStudies,
+  allContentfulPartners,
+  allContentfulTestimonials
+}) => {
 
   const homeJSX = allContentfulSections.edges.map(({ node }) => {
     const nodeToSend = {
       ...node,
-      caseStudies: allContentfulCaseStudies.nodes
+      caseStudies: allContentfulCaseStudies.nodes,
+      parners: allContentfulPartners.nodes,
+      testimonials: allContentfulTestimonials.nodes,
     };
 
     const fxnNode = node.cssClass ? sections[node.cssClass] : sections['default'];
@@ -68,12 +75,45 @@ const IndexPage = () => {
 
   allContentfulCaseStudies {
     nodes {
+      name
       description
       logo {
         title
         file{
           url
         }
+      }
+      contentImage{
+        file{
+          url
+        }
+      }
+    }
+  }
+
+  allContentfulPartners {
+    nodes {
+      contentful_id
+      logo {
+        file {
+          url
+        }
+      }
+      title
+    }
+  }
+
+  allContentfulTestimonials {
+    nodes {
+      author
+      authorImage {
+        file {
+          url
+        }
+      }
+      authorSubtitle
+      description {
+        description
       }
     }
   }

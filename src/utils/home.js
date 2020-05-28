@@ -63,8 +63,8 @@ const sections = {
             subtitle,
             action,
             urlAction,
-            SubTitle2,
-            Data,
+            subTitle2,
+            data,
       }) => (
                   <section class="achieve-sec pt-10 pt-md-8 pt-lg-10 pb-5 pb-md-8 pb-lg-10 mt-3 mt-md-0">
                         <div class="bg"></div>
@@ -108,7 +108,7 @@ const sections = {
                                     <div class="col-12 col-md-6 col-lg-5">
                                           <div class="txt-wrp mb-3 mb-md-0">
                                                 <h3 class="mb-1 mb-lg-2">{subtitle}</h3>
-                                                <p class="mb-2 mb-md-3 mb-lg-5">{SubTitle2}</p>
+                                                <p class="mb-2 mb-md-3 mb-lg-5">{subTitle2}</p>
                                                 <a href={urlAction} class="btn btn-primary">{action}</a>
                                           </div>
                                     </div>
@@ -120,10 +120,10 @@ const sections = {
                                                 <div class="txt-col order-md-1">
                                                       <div class="d-flex d-lg-block">
                                                             {
-                                                                  Data && Data.map(({ value, name }) => (
+                                                                  data && data.data.map(({ value, name }) => (
                                                                         <div class="txt">
                                                                               <h3 class="mb-50">{value}</h3>
-                                                                              <p class="mb-0" dangerouslySetInnerHTML={{ __html: { name } }}></p>
+                                                                              <p class="mb-0" dangerouslySetInnerHTML={{ __html: name }} />
                                                                         </div>
                                                                   ))
                                                             }
@@ -250,31 +250,46 @@ const sections = {
                                     <h2 class="mb-50 font-weight-normal">{title}</h2>
                                     <h4 class="mb-0 font-weight-normal">{subtitle}</h4>
                               </div>
+                              {console.log(caseStudies)}
                               <div class="row align-items-center mb-5 mb-xl-0">
                                     {
                                           caseStudies.map(({
                                                 description,
-                                                logo
-                                          }) => (
-                                                      <div class="col-12 col-md-6 order-md-2 ">
-                                                            <div class="txt-wrp text-center text-md-left">
-                                                                  <div class="log-img mb-15 mb-lg-25">
-                                                                        {
-                                                                              logo && logo.map(({ title, file }) => {
-                                                                                    if (title.includes('mob')) {
-                                                                                          <img src={file.url} alt="" class="mw-100 d-block d-md-none mx-auto" />
-                                                                                    } else
-                                                                                          if (title.includes('tab')) {
-                                                                                                <img src={file.url} alt="" class="mw-100 d-none d-md-inline-block d-lg-none" />
-                                                                                          } else {
-                                                                                                <img src={file.url} alt="" class="mw-100 d-none d-lg-inline-block" />
-                                                                                          }
-                                                                              })
-                                                                        }
-                                                                        <p class="mb-0 mb-md-3">{description}</p>
-                                                                        <Link to="/case" class="btn btn-primary d-none d-md-inline-block">Read Case Study</Link>
+                                                logo,
+                                                contentImage
+                                          }, idx) => (
+                                                      <div class="row align-items-center ">
+                                                            {(idx % 2 !== 0) ? (
+                                                                  <><div class="col-12 col-md-6  pr-md-3 pr-xl-5">
+                                                                        <div class="txt-wrp text-center text-md-left">
+                                                                              <div class="log-img mb-15 mb-lg-25">
+                                                                                    <img src={logo[0].file.url} class="" alt="" />
+                                                                              </div>
+                                                                              <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
+                                                                              <p class="mb-1 mb-md-0">{description}</p></div>
+                                                                              <a href="https://aavya.kinsta.cloud/our-case-studies/" class="btn btn-primary d-none d-md-inline-block">Read Case Study</a>
                                                                   </div>
-                                                            </div>
+                                                                        <div class="col-12 col-md-6 ">
+                                                                              <div class="serve-img text-center">
+                                                                                    <img src={contentImage.file.url} alt="" class="mw-100 d-none d-lg-inline-block" />
+                                                                              </div>
+                                                                        </div></>
+                                                            ) : (
+                                                                        <> <div class="col-12 col-md-6 ">
+                                                                              <div class="serve-img text-center">
+                                                                                    <img src={contentImage.file.url} alt="" class="mw-100 d-none d-lg-inline-block" />
+                                                                              </div>
+                                                                        </div>
+                                                                              <div class="col-12 col-md-6  pr-md-3 pr-xl-5">
+                                                                                    <div class="txt-wrp text-center text-md-left">
+                                                                                          <div class="log-img mb-15 mb-lg-25">
+                                                                                                <img src={logo[0].file.url} class="" alt="" />
+                                                                                          </div>
+                                                                                          <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
+                                                                                          <p class="mb-1 mb-md-0">{description}</p></div>
+                                                                                    <Link to="/case" class="btn btn-primary d-none d-md-inline-block">Read Case Study</Link>
+                                                                              </div></>
+                                                                  )}
                                                       </div>
                                                 ))
                                     }
@@ -324,7 +339,8 @@ const sections = {
       ),
       'partner-sec': ({
             title,
-            subtitle
+            subtitle,
+            parners,
       }) => (
                   <section class="partner-sec pt-5 pt-lg-8 pb-5 pb-lg-8">
                         <div class="container">
@@ -335,42 +351,12 @@ const sections = {
                               <div class="row justify-content-center">
                                     <div class="col-12 col-lg-10">
                                           <div class="row">
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/shopify-plus-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/klaviyo-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/vwo-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/g-parner-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/insta-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/godatafeed-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/f-marketing-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/looker-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/supermetric-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/optimizely-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/unbounce-logo.png" alt="" /></div>
-                                                </div>
-                                                <div class="col-6 col-md-4 col-lg-3">
-                                                      <div class="part-logo"><img src="images/justuno-logo.png" alt="" /></div>
-                                                </div>
+                                                {parners && parners.map(({ logo }) => (
+                                                      <div class="col-6 col-md-4 col-lg-3">
+                                                            <div class="part-logo"><img src={logo[0].file.url} alt="" /></div>
+                                                      </div>
+                                                ))}
+
                                           </div>
                                     </div>
                               </div>
@@ -381,6 +367,7 @@ const sections = {
       'testimonial-sec': ({
             title,
             subtitle,
+            testimonials,
       }) => (
                   <section class="testimonial-sec pt-5 pt-lg-8">
                         <div class="bg"></div>
@@ -389,19 +376,20 @@ const sections = {
                                     <h2 class="mb-0 font-weight-normal">{title}</h2>
                               </div>
                               <div class="owl-carousel owl-theme">
-                                    <div class="item">
-                                          <div class="testi-blk bg-white px-15 px-md-3 py-2 py-md-3">
-                                                <h2 class="mb-0">"</h2>
-                                                <h6 class="mb-15">In consequat, quam id sodales hendrerit, eros mi molestie leo, nec lacinia risus neque tristique augue. Proin tempus urna vel congue elementum. Vestibulum euismod accumsan dui, ac iaculis sem viverra eu. Donec convallis, elit vitae ornare cursus, libero purus facilisis felis, a volutpat metus tortor bibendum elit. Integer nec mi eleifend</h6>
-                                                <div class="media align-items-center">
-                                                      <img src="images/avatar.png" class="mr-15 mr-lg-25" alt="..." />
-                                                      <div class="media-body">
-                                                            <h6 class="m-0">Demi</h6>
-                                                            <p class="mb-0">CEO, 12th Tribe</p>
+                                    {testimonials && testimonials.map(({ author, authorImage, authorSubTitle, description }) => (
+                                          <div class="item">
+                                                <div class="testi-blk bg-white px-15 px-md-3 py-2 py-md-3">
+                                                      <h2 class="mb-0">"</h2>
+                                                      <h6 class="mb-15">{description.description}</h6>
+                                                      <div class="media align-items-center">
+                                                            <img src={authorImage.file.url} class="mr-15 mr-lg-25" alt="..." />
+                                                            <div class="media-body">
+                                                                  <h6 class="m-0">{author}</h6>
+                                                                  <p class="mb-0">{authorSubTitle}</p>
+                                                            </div>
                                                       </div>
                                                 </div>
-                                          </div>
-                                    </div>
+                                          </div>))}
                               </div>
                         </div>
                   </section>
