@@ -256,6 +256,7 @@ const sections = {
                                           caseStudies.map(({
                                                 description,
                                                 logo,
+                                                name,
                                                 contentImage
                                           }, idx) => (
                                                       <div class="row align-items-center ">
