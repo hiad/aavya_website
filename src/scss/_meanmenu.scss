@@ -13,7 +13,7 @@ a.meanmenu-reveal {
 }
 
 /* when under viewport size, .mean-container is added to body */
-/*.mean-container .mean-bar {
+.mean-container {
 	float: left;
 	width: 100%;
 	position: relative;
@@ -22,7 +22,7 @@ a.meanmenu-reveal {
 	min-height: 42px;
 	z-index: 999999;
 }
-*/
+
 .mean-container a.meanmenu-reveal {
 	width: 22px;
 	height: 22px;
@@ -88,45 +88,34 @@ a.meanmenu-reveal {
 	right: 0;top: 100%;
 }
 
-.mean-container .mean-nav ul {
+.mean-container {
 	padding: 0;
 	margin: 0;
 	width: 100%;
 	list-style-type: none;
 }
 
-.mean-container .mean-nav ul li {
+.mean-container li {
 	position: relative;
 	float: left;
 	width: 100%;
 }
 
-.mean-container .mean-nav ul li a {
-	display: block;
-	float: left;
-	width: 90%;
-	padding: 1em 5%;
-	margin: 0;
-	text-align: left;
-	color: #fff;
-	border-top: 1px solid #383838;
-	border-top: 1px solid rgba(255,255,255,0.5);
-	text-decoration: none;
-	text-transform: uppercase;
+.mean-container li a {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 1em 5%;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+    border-top: 1px solid #383838;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.mean-container .mean-nav ul li li a {
-	width: 80%;
-	padding: 1em 10%;
-	border-top: 1px solid #f1f1f1;
-	border-top: 1px solid rgba(255,255,255,0.25);
-	opacity: 0.75;
-	filter: alpha(opacity=75);
-	text-shadow: none !important;
-	visibility: visible;
-}
-
-.mean-container .mean-nav ul li.mean-last a {
+.mean-container li.mean-last a {
 	border-bottom: none;
 	margin-bottom: 0;
 }

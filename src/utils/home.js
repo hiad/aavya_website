@@ -16,6 +16,10 @@ import plan from '../images/plan.svg';
 import charge from '../images/charge.svg';
 import { Link } from "gatsby";
 import Tabs from "../components/tabs";
+import SliderComponent from "../components/slider";
+import img32x from "../images/img3@2x.png";
+import img42x from "../images/img4@2x.png";
+
 
 //TODO: Fix responsive images
 //TODO: Add an slider
@@ -34,7 +38,7 @@ const Slider = ({
                                           <div class="text-center pt-4 pt-xl-3 pt-xxl-6 pb-0 pb-xl-3 pb-xxl-6">
                                                 <h1 class="mb-2 display-1">{title}</h1>
                                                 <h5 class="mb-3 max font-weight-normal">{subtitle}</h5>
-                                                <a href={urlAction} class="btn btn-primary mb-1">{action}</a>
+                                                <a href={urlAction} class="btn btn-primary mb-1">{action || "Request Consultation"}</a>
                                                 <p class="small mb-0">100% Free | No Consultation Fees</p>
                                           </div>
                                     </div>
@@ -153,12 +157,10 @@ const sections = {
                                     <h2 class="mb-50 font-weight-normal">{title}</h2>
                                     <h4 class="mb-0 font-weight-normal">{subtitle}</h4>
                               </div>
-
                               <Tabs />
                         </div>
                   </section>
             ),
-      //TODO: Implement case studies
       'case-sec': ({
             title,
             subtitle,
@@ -235,9 +237,7 @@ const sections = {
                               </div>
                               <div class="col-12 col-md-6 order-md-1">
                                     <div class="serve-img text-center">
-                                          <img src="images/img3@2x.png" alt="" class="mw-100 d-none d-lg-inline-block" />
-                                          <img src="images/tab-img3@2x.png" alt="" class="mw-100 d-none d-md-inline-block d-lg-none" />
-                                          <img src="images/mob-img3@2x.png" alt="" class="mw-100 d-block d-md-none mx-auto" />
+                                          <img src={img32x} alt="" class="mw-100" />
                                     </div>
                               </div>
 
@@ -251,8 +251,7 @@ const sections = {
                               </div>
                               <div class="col-12 col-md-6">
                                     <div class="serve-img text-center">
-                                          <img src="images/img4@2x.png" alt="" class="mw-100 d-none d-lg-inline-block" />
-                                          <img src="images/tab-img4@2x.png" alt="" class="mw-100 d-inline-block d-lg-none" />
+                                          <img src={img42x} alt="" class="mw-100" />
                                     </div>
                               </div>
                         </div>
@@ -297,9 +296,9 @@ const sections = {
                               <div class="sec-title mb-3 mb-lg-4 text-center max mx-auto">
                                     <h2 class="mb-0 font-weight-normal">{title}</h2>
                               </div>
-                              <div class="owl-carousel owl-theme">
+                              <SliderComponent>
                                     {testimonials && testimonials.map(({ author, authorImage, authorSubTitle, description }) => (
-                                          <div class="item">
+                                          <div  class="item">
                                                 <div class="testi-blk bg-white px-15 px-md-3 py-2 py-md-3">
                                                       <h2 class="mb-0">"</h2>
                                                       <h6 class="mb-15">{description.description}</h6>
@@ -312,7 +311,7 @@ const sections = {
                                                       </div>
                                                 </div>
                                           </div>))}
-                              </div>
+                              </SliderComponent>
                         </div>
                   </section>
             ),
