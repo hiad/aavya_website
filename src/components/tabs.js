@@ -13,8 +13,6 @@ const TabsComponent = ({
             setTab(tabIndex);
       };
 
-      console.log(tabs.nodes);
-
       return (
             <Tabs selectedIndex={tab} onSelect={tabIndex => {
                   handleClick(tabIndex);
