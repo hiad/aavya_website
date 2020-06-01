@@ -42,20 +42,5 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     }
-    // {
-    //   resolve: 'gatsby-plugin-purgecss',
-    //   options: {
-    //     develop: true,
-    //     printAll: true,
-    //     ignore: [
-    //       '/node_modules/slick-carousel/slick/slick.css',
-    //       '/node_modules/slick-carousel/slick/slick-theme.css',
-    //       '/node_modules/react-tabs/style/react-tabs.css',
-    //     ]
-    //   }
-    // }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

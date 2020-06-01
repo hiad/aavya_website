@@ -15,7 +15,7 @@ const Header = () => {
         <a className="navbar-brand" href="#">
           <img src={ImageLogo} alt="" />
         </a>
-        <nav className="mx-auto d-md-none d-sm-none d-lg-block">
+        <nav className="mx-auto d-none d-lg-block">
           <ul className="nav">
             <li><Link to="/about">About</Link></li>
             <li><Link to="#">Solutions </Link>

@@ -303,43 +303,45 @@ const sections = {
             action,
       }) => (
                   <section className="impect-sec py-4 py-md-7 py-lg-10">
-                        <div className="row justify-content-center">
-                              <div className="col-12 col-lg-10">
-                                    <div className="sec-title mb-3 mb-md-5 text-center max mx-auto">
-                                          <h2 className="mb-50 font-weight-normal">{title}</h2>
-                                          <h4 className="mb-0 font-weight-normal">{subtitle}</h4>
-                                    </div>
-                                    <div className="row">
-                                          <div className="col-4">
-                                                <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
-                                                      <img src={research} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
-                                                      <div className="media-body">
-                                                            <h5 className="mb-0">Competitor Research</h5>
-                                                            <p className="mb-0">Keywords, Bids, Traffics, etc</p>
+                        <div className="container">
+                              <div className="row justify-content-center">
+                                    <div className="col-12 col-lg-10">
+                                          <div className="sec-title mb-3 mb-md-5 text-center max mx-auto">
+                                                <h2 className="mb-50 font-weight-normal">{title}</h2>
+                                                <h4 className="mb-0 font-weight-normal">{subtitle}</h4>
+                                          </div>
+                                          <div className="row">
+                                                <div className="col-4">
+                                                      <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
+                                                            <img src={research} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
+                                                            <div className="media-body">
+                                                                  <h5 className="mb-0">Competitor Research</h5>
+                                                                  <p className="mb-0">Keywords, Bids, Traffics, etc</p>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <div className="col-4">
+                                                      <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
+                                                            <img src={plan} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
+                                                            <div className="media-body">
+                                                                  <h5 className="mb-0">Unique Growth Plan</h5>
+                                                                  <p className="mb-0">Keywords, Bids, Traffics, etc</p>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <div className="col-4">
+                                                      <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
+                                                            <img src={charge} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
+                                                            <div className="media-body">
+                                                                  <h5 className="mb-0">What we Charge</h5>
+                                                                  <p className="mb-0">Keywords, Bids, Traffics, etc</p>
+                                                            </div>
                                                       </div>
                                                 </div>
                                           </div>
-                                          <div className="col-4">
-                                                <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
-                                                      <img src={plan} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
-                                                      <div className="media-body">
-                                                            <h5 className="mb-0">Unique Growth Plan</h5>
-                                                            <p className="mb-0">Keywords, Bids, Traffics, etc</p>
-                                                      </div>
-                                                </div>
+                                          <div className="text-center">
+                                                <a href={urlAction} className="btn btn-primary">{action}</a>
                                           </div>
-                                          <div className="col-4">
-                                                <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
-                                                      <img src={charge} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
-                                                      <div className="media-body">
-                                                            <h5 className="mb-0">What we Charge</h5>
-                                                            <p className="mb-0">Keywords, Bids, Traffics, etc</p>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div className="text-center">
-                                          <a href={urlAction} className="btn btn-primary">{action}</a>
                                     </div>
                               </div>
                         </div>

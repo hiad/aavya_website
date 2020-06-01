@@ -1343,6 +1343,10 @@ footer {
 	}
 }
 
+.react-tabs__tab:focus:after{
+	display: none;
+}
+
 .react-tabs {
 	ul {
 		list-style: none;
@@ -1363,6 +1367,7 @@ footer {
 		display: inline-block;
 		padding: 0;
 		vertical-align: middle;
+		
 		&:not(:first-child) {
 			margin-left: 70px;
 			@include media-breakpoint-down(xl) {
@@ -1415,12 +1420,20 @@ footer {
 				border: 0;
 				z-index: 1;
 				background: #001e42;
+				padding: 10px 15px;
+				font-size: 14px;
 			}
 			@include media-breakpoint-down(sm) {
 				padding: 10px 15px;
 			}
 		}
 	}
+}
+
+.react-tabs__tab:focus {
+    box-shadow: none;
+    border-color: transparent;
+    outline: none;
 }
 
 .react-tabs__tab.react-tabs__tab--selected {
@@ -1754,9 +1767,6 @@ footer {
 			ul {
 				background: $white;
 				border-color: $primary;
-				&:after {
-					border-color: $primary;
-				}
 			}
 			a.react-tabs__tab--selected {
 				background: $white;
