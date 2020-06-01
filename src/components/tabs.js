@@ -18,7 +18,7 @@ const TabsComponent = ({
                   handleClick(tabIndex);
                   setOpen(!open);
             }}>
-                  <TabList className={open && 'open'}>
+                  <TabList className={open ? 'open' : ''}>
                         {tabs.nodes.map(({
                               tab,
                               logo
