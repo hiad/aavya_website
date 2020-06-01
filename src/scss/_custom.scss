@@ -1423,6 +1423,48 @@ footer {
 	}
 }
 
+.react-tabs__tab.react-tabs__tab--selected {
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid white;
+	color: inherit;
+	border-radius: none;
+	font-size: 20px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 0 0 15px 0;
+	border-bottom: 2px solid white;
+	line-height: 22px;
+}
+
+.react-tabs {
+	> .react-tabs__tab--selected {
+		display: block;
+	}
+}
+
+
+.react-tabs__tab {
+	font-size: 20px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 0;
+	border-bottom: 2px solid transparent;
+	line-height: 22px;
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: left;
+	}
+}
+
 .react-tabs__tab {
 	font-size: 20px;
 	display: inline-block;
@@ -1472,26 +1514,7 @@ footer {
 	}
 }
 
-.react-tabs__tab.react-tabs__tab--selected {
-	background: transparent;
-	border: none;
-	border-bottom: 2px solid white;
-	color: inherit;
-	border-radius: none;
-	font-size: 20px;
-	display: inline-block;
-	color: white;
-	text-decoration: none;
-	padding: 0 0 15px 0;
-	border-bottom: 2px solid white;
-	line-height: 22px;
-}
 
-.react-tabs {
-	> .react-tabs__tab--selected {
-		display: block;
-	}
-}
 .result-sec {
 	background: #001e42;
 	color: #fff;
