@@ -45,9 +45,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
-        options: {
-          printRejected: true,
-        }
+        ignore: [
+          '/node_modules/slick-carousel/slick/slick.css',
+          '/node_modules/slick-carousel/slick/slick-theme.css',
+          '/node_modules/react-tabs/style/react-tabs.css',
+        ]
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
