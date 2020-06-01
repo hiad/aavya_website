@@ -32,7 +32,7 @@ const Header = () => {
           <ul className="nav align-items-center">
             <li className="d-none d-lg-block"><a href="#">help</a></li>
             <li><Link href="#" className="req-btn">Request Consultation</Link></li>
-            <li className="d-none d-lg-block"><a href="#">EN <span className="caret"></span></a></li>
+            <li className="d-none d-lg-block"><a href="#">EN</a></li>
           </ul>
         </div>
         <div className="menu-burger d-block d-lg-none">

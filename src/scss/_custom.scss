@@ -1228,6 +1228,7 @@ footer {
 }
 .sec-title {
 	&.max {
+		position: relative;
 		max-width: 750px;
 		margin: 0 auto;
 	}
@@ -1551,16 +1552,17 @@ footer {
 		}
 	}
 	:not(.bg) {
-		position: relative;
 		z-index: 1;
 	}
 	.log-img {
 		img {
 			@include media-breakpoint-down(lg) {
 				max-height: 50px;
+				z-index: 2;
 			}
 			@include media-breakpoint-down(sm) {
 				max-height: 40px;
+				z-index: 2;
 			}
 		}
 	}

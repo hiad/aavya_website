@@ -7,7 +7,8 @@ const gettingHomeJSX = ({
   allContentfulSections,
   allContentfulCaseStudies,
   allContentfulPartners,
-  allContentfulTestimonials
+  allContentfulTestimonials,
+  allContentfulTabs
 }) => {
 
   const homeJSX = allContentfulSections.edges.map(({ node }) => {
@@ -16,6 +17,7 @@ const gettingHomeJSX = ({
       caseStudies: allContentfulCaseStudies.nodes,
       parners: allContentfulPartners.nodes,
       testimonials: allContentfulTestimonials.nodes,
+      tabs: allContentfulTabs,
     };
 
     const fxnNode = node.cssClass ? sections[node.cssClass] : sections['default'];
@@ -45,6 +47,39 @@ const IndexPage = () => {
             name
           }
         }
+        image{
+          fluid{
+            ...GatsbyContentfulFluid_withWebp
+          }
+          fixed{
+            ...GatsbyContentfulFixed_withWebp
+          }
+        }
+        images{
+          fluid{
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+      }
+    }
+  }
+  allContentfulTabs(filter: {page: {eq: "Home"}}, sort: {fields: order}) {
+    nodes {
+      tab
+      title
+      subTitle
+      text {
+        text
+      }
+      image {
+        fluid{
+            ...GatsbyContentfulFluid_withWebp
+          }
+      }
+      logo {
+        file {
+          url
+        }
       }
     }
   }
@@ -57,6 +92,11 @@ const IndexPage = () => {
         subtitle
         title
         urlAction
+        image{
+          fluid{
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
       }
     }
   }
@@ -84,8 +124,8 @@ const IndexPage = () => {
         }
       }
       contentImage{
-        file{
-          url
+        fluid{
+          ...GatsbyContentfulFluid_withWebp
         }
       }
     }
@@ -95,8 +135,8 @@ const IndexPage = () => {
     nodes {
       contentful_id
       logo {
-        file {
-          url
+        fluid{
+          ...GatsbyContentfulFluid_withWebp
         }
       }
       title
