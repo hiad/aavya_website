@@ -1,6 +1,7 @@
 // import { Link } from "gatsby";
 import React from "react"
 import aavya from '../images/Aavya.svg';
+import Img from "gatsby-image";
 import img46 from '../images/img46@2x.png';
 import img47 from '../images/img47@2x.png';
 import img48 from '../images/img48@2x.png';
@@ -33,6 +34,7 @@ const sections = {
             title,
             subtitle,
             data,
+            images,
       }) => (
                   <section class="about-cont pt-4 pt-lg-7">
                         <div class="bg"></div>
@@ -48,7 +50,7 @@ const sections = {
                                                 </div>
                                                 <div class="col-12 col-md-6">
                                                       <div class="serve-img text-center">
-                                                            <img src={img46} alt="" class="mw-100 d-inline-block" />
+                                                            <Img fluid={images[0].fluid} alt="" class="mw-100 d-inline-block" />
                                                       </div>
                                                 </div>
                                           </div>
@@ -66,7 +68,7 @@ const sections = {
                                     </div>
                                     <div class="col-12 col-md-6 order-md-1">
                                           <div class="serve-img text-center">
-                                                <img src={img47} alt="" class="mw-100 d-inline-block" />
+                                                <Img fluid={images[1].fluid} alt="" class="mw-100 d-inline-block" />
                                           </div>
                                     </div>
                               </div>
@@ -79,7 +81,7 @@ const sections = {
                                     </div>
                                     <div class="col-12 col-md-6">
                                           <div class="serve-img text-center">
-                                                <img src={img48} alt="" class="mw-100 d-inline-block" />
+                                                <Img fluid={images[2].fluid} alt="" class="mw-100 d-inline-block" />
                                           </div>
                                     </div>
                               </div>
@@ -92,7 +94,7 @@ const sections = {
                                     </div>
                                     <div class="col-12 col-md-6 order-md-1">
                                           <div class="serve-img text-center">
-                                                <img src={img49} alt="" class="mw-100 d-inline-block" />
+                                                <Img fluid={images[3].fluid} alt="" class="mw-100 d-inline-block" />
                                           </div>
                                     </div>
                               </div>
@@ -105,7 +107,7 @@ const sections = {
                                     </div>
                                     <div class="col-12 col-md-6">
                                           <div class="serve-img text-center">
-                                                <img src={img50} alt="" class="mw-100 d-inline-block" />
+                                                <Img fluid={images[4].fluid} alt="" class="mw-100 d-inline-block" />
                                           </div>
                                     </div>
                               </div>

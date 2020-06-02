@@ -5,8 +5,6 @@ import charge from '../images/charge.svg';
 import { Link } from "gatsby";
 import Tabs from "../components/tabs";
 import SliderComponent from "../components/slider";
-import img32x from "../images/img3@2x.png";
-import img42x from "../images/img4@2x.png";
 import Img from "gatsby-image";
 
 
@@ -161,7 +159,7 @@ const sections = {
                                                                               <div className="log-img mb-15 mb-lg-25">
                                                                                     <img src={logo[0].file.url} className="" alt="" />
                                                                               </div>
-                                                                              <p className="mb-1 mb-md-0">{description}</p></div>
+                                                                              <p className="mb-1 mb-md-0 mb-md-3">{description}</p></div>
                                                                         <a href="https://aavya.kinsta.cloud/our-case-studies/" className="btn btn-primary d-none d-md-inline-block">Read Case Study</a>
                                                                   </div>
                                                                         <div className="col-12 col-md-6 ">
@@ -181,7 +179,7 @@ const sections = {
                                                                                           <div className="log-img mb-15 mb-lg-25">
                                                                                                 <img src={logo[0].file.url} className="" alt="" />
                                                                                           </div>
-                                                                                          <p className="mb-1 mb-md-0">{description}</p></div>
+                                                                                          <p className="mb-1 mb-md-0 mb-md-3">{description}</p></div>
                                                                                     <Link to="/case" className="btn btn-primary d-none d-md-inline-block">Read Case Study</Link>
                                                                               </div></>
                                                                   )}

@@ -39,6 +39,11 @@ const aboutPage = () => {
             name
           }
         }
+        images{
+          fluid{
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
       }
     }
   }
