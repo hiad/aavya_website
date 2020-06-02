@@ -2,11 +2,6 @@
 import React from "react"
 import aavya from '../images/Aavya.svg';
 import Img from "gatsby-image";
-import img46 from '../images/img46@2x.png';
-import img47 from '../images/img47@2x.png';
-import img48 from '../images/img48@2x.png';
-import img49 from '../images/img49@2x.png';
-import img50 from '../images/img50@2x.png';
 
 const sections = {
       'banner': ({

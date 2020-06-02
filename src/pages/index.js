@@ -54,10 +54,16 @@ const IndexPage = () => {
           fixed{
             ...GatsbyContentfulFixed_withWebp
           }
+          file{
+            url
+          }
         }
         images{
           fluid{
             ...GatsbyContentfulFluid_withWebp
+          }
+          file{
+            url
           }
         }
       }

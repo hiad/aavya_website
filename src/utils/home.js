@@ -1,7 +1,4 @@
 import React from "react"
-import research from '../images/research.svg';
-import plan from '../images/plan.svg';
-import charge from '../images/charge.svg';
 import { Link } from "gatsby";
 import Tabs from "../components/tabs";
 import SliderComponent from "../components/slider";
@@ -143,7 +140,6 @@ const sections = {
                                     <h2 className="mb-50 font-weight-normal">{title}</h2>
                                     <h4 className="mb-0 font-weight-normal">{subtitle}</h4>
                               </div>
-                              {console.log(caseStudies)}
                               <div className="row align-items-center mb-5 mb-xl-0">
                                     {
                                           caseStudies.map(({
@@ -299,6 +295,8 @@ const sections = {
             subtitle,
             urlAction,
             action,
+            data,
+            images,
       }) => (
                   <section className="impect-sec py-4 py-md-7 py-lg-10">
                         <div className="container">
@@ -309,33 +307,20 @@ const sections = {
                                                 <h4 className="mb-0 font-weight-normal">{subtitle}</h4>
                                           </div>
                                           <div className="row">
-                                                <div className="col-4">
-                                                      <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
-                                                            <img src={research} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
-                                                            <div className="media-body">
-                                                                  <h5 className="mb-0">Competitor Research</h5>
-                                                                  <p className="mb-0">Keywords, Bids, Traffics, etc</p>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div className="col-4">
-                                                      <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
-                                                            <img src={plan} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
-                                                            <div className="media-body">
-                                                                  <h5 className="mb-0">Unique Growth Plan</h5>
-                                                                  <p className="mb-0">Keywords, Bids, Traffics, etc</p>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div className="col-4">
-                                                      <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
-                                                            <img src={charge} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
-                                                            <div className="media-body">
-                                                                  <h5 className="mb-0">What we Charge</h5>
-                                                                  <p className="mb-0">Keywords, Bids, Traffics, etc</p>
-                                                            </div>
-                                                      </div>
-                                                </div>
+                                                {data && data.data.map(({
+                                                      name,
+                                                      value,
+                                                }, idx) => (
+                                                            <div className="col-4">
+                                                                  <div className="media mb-4 mb-lg-5 d-block d-lg-flex">
+                                                                        <img src={images[idx].file.url} className="mb-1 mb-md-15 mr-lg-3" alt="..." />
+                                                                        <div className="media-body">
+                                                                              <h5 className="mb-0">{name}</h5>
+                                                                              <p className="mb-0">{value}</p>
+                                                                        </div>
+                                                                  </div>
+                                                            </div>)
+                                                )}
                                           </div>
                                           <div className="text-center">
                                                 <a href={urlAction} className="btn btn-primary">{action}</a>
