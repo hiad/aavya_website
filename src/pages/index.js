@@ -77,6 +77,7 @@ const IndexPage = () => {
       text {
         text
       }
+      page
       image {
         fluid{
             ...GatsbyContentfulFluid_withWebp
