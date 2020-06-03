@@ -47,7 +47,6 @@ const TabsComponent = ({
                                                       <div className="txt-wrp">
                                                             {title && <h2 className="mb-15 font-weight-normal">{title}</h2>}
                                                             {text && <p className="mb-0 mb-md-3">{text.text}</p>}
-                                                            <p dangerouslySetInnerHTML={{ __html: tab }}></p>
                                                       </div>
                                                 </div>
                                                 <div className="col-12 col-md-7 col-lg-8 order-md-1">
