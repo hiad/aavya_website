@@ -10,7 +10,6 @@ const gettingHomeJSX = ({
   allContentfulTestimonials,
   allContentfulTabs
 }) => {
-
   const homeJSX = allContentfulSections.edges.map(({ node }) => {
     const nodeToSend = {
       ...node,

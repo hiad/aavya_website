@@ -159,7 +159,6 @@ const sections = {
                                                                         <a href="https://aavya.kinsta.cloud/our-case-studies/" className="btn btn-primary d-none d-md-inline-block">Read Case Study</a>
                                                                   </div>
                                                                         <div className="col-12 col-md-6 ">
-                                                                              {console.log(contentImage)}
                                                                               <div className="serve-img text-center" style={{ width: '100%' }}>
                                                                                     {contentImage && <Img fluid={contentImage.fluid} alt="" />}
                                                                               </div>
@@ -290,7 +289,7 @@ const sections = {
                         </div>
                   </section>
             ),
-      'impact-sec': ({
+      'impect-sec': ({
             title,
             subtitle,
             urlAction,
