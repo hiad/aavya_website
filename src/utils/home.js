@@ -200,33 +200,34 @@ const sections = {
                         }, idx) => (
                                     <div className="container">
                                           {(idx % 2 !== 0) ? (
-                                                <div className="row align-items-center mb-5 mb-xl-2">
-                                                      <div className="col-12 col-md-6 order-md-2 pl-md-3 pl-xl-5">
+                                                <div className="row align-items-center">
+                                                      <div className="col-12 col-md-6 pr-md-3 pr-xl-5">
                                                             <div className="txt-wrp text-center text-md-left">
                                                                   <h2 className="mb-1 mb-md-2 font-weight-normal">{name}</h2>
                                                                   <p className="mb-1 mb-md-0">{value}</p>
                                                             </div>
                                                       </div>
-                                                      <div className="col-12 col-md-6 order-md-1">
+                                                      <div className="col-12 col-md-6">
                                                             <div className="serve-img text-center">
                                                                   <Img fluid={images[idx].fluid} alt="" className="mw-100" />
                                                             </div>
                                                       </div>
                                                 </div>
                                           ) : (
-                                                      <div className="row align-items-center">
-                                                            <div className="col-12 col-md-6 pr-md-3 pr-xl-5">
+                                                      <div className="row align-items-center mb-5 mb-xl-2">
+                                                            <div className="col-12 col-md-6 order-md-2 pl-md-3 pl-xl-5">
                                                                   <div className="txt-wrp text-center text-md-left">
                                                                         <h2 className="mb-1 mb-md-2 font-weight-normal">{name}</h2>
                                                                         <p className="mb-1 mb-md-0">{value}</p>
                                                                   </div>
-                                                            </div>
-                                                            <div className="col-12 col-md-6">
+                                                            </div >
+                                                            <div className="col-12 col-md-6 order-md-1">
                                                                   <div className="serve-img text-center">
                                                                         <Img fluid={images[idx].fluid} alt="" className="mw-100" />
                                                                   </div>
                                                             </div>
-                                                      </div>
+                                                      </div >
+
                                                 )}
                                     </div>
                               ))}

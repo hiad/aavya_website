@@ -119,7 +119,7 @@ const IndexPage = () => {
     }
   }
 
-  allContentfulCaseStudies {
+  allContentfulCaseStudies (sort: {fields: order}) {
     nodes {
       name
       description
