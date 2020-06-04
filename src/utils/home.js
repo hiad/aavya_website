@@ -67,7 +67,7 @@ const sections = {
                                           <div className="col-12 col-md-10 col-lg-8">
                                                 <div className="row justify-content-center align-items-center">
                                                       {images && images.map((imageObj, idx) => (
-                                                            <div className="col-6 col-sm-4 col-xl-3">
+                                                            <div className="col-4 col-sm-4 col-xl-3">
                                                                   <div className="logo">
                                                                         <Img key={idx + 1} fluid={imageObj.fluid} className="d-block mx-auto" />
                                                                   </div>
@@ -88,7 +88,7 @@ const sections = {
                                     <div className="col-12 col-md-6 col-lg-7">
                                           <div className="d-block d-lg-flex align-items-center">
                                                 <div className="achieve-img text-center order-md-2" style={{ width: '100%' }}>
-                                                      <Img key="imageAchive" fluid={imageContainer.fluid} className="d-block shadow-img" />
+                                                      <Img key="imageAchive" fluid={imageContainer.fluid} className="d-block" />
                                                 </div>
                                                 <div className="txt-col order-md-1">
                                                       <div className="d-flex d-lg-block">
@@ -248,7 +248,7 @@ const sections = {
                                     <div className="col-12 col-lg-10">
                                           <div className="row">
                                                 {parners && parners.map(({ logo }) => (
-                                                      <div className="col-6 col-md-4 col-lg-3">
+                                                      <div className="col-4 col-md-4 col-lg-3">
                                                             <div className="part-logo"><Img fluid={logo[0].fluid} alt="" /></div>
                                                       </div>
                                                 ))}

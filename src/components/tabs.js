@@ -16,7 +16,7 @@ const TabsComponent = ({
       const pageClassName = tabs.nodes[0].page;
 
       return (
-            <Tabs className={pageClassName} selectedIndex={tab} onSelect={tabIndex => {
+            <Tabs className="react-tabs" selectedIndex={tab} onSelect={tabIndex => {
                   handleClick(tabIndex);
                   setOpen(!open);
             }}>

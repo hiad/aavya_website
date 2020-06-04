@@ -16,7 +16,16 @@ const Footer = () => (
                               <div className="foot-about mb-3 text-center text-md-left">
                                     <a href="#" className="d-inline-block mb-2"><img src="images/Aavya.svg" alt="" /></a>
                                     <p className="mb-0 mb-md-1">Etiam convallis elementum sapien, a aliquam turpis aliquam vitae. Praesent sollicitudin felis vel mi facilisis posuere.</p>
-                                    <ul className="logo-list d-flex d-md-block align-items-center">
+                                    <ul className="logo-list d-none d-md-flex align-items-center">
+                                          <li><a href="#"><img src={shopify} alt="" /></a></li>
+                                          <li><a href="#"><img src={klaviyo} alt="" /></a></li>
+                                    </ul> 
+                                    <ul className="logo-list d-none d-md-flex align-items-center">
+                                          <li><a href="#"><img src={footInsta} alt="" /></a></li>
+                                          <li><a href="#"><img src={footfb} alt="" /></a></li>
+                                    </ul>
+
+                                    <ul className="logo-list d-flex d-md-none no-wrap align-items-center">
                                           <li><a href="#"><img src={shopify} alt="" /></a></li>
                                           <li><a href="#"><img src={klaviyo} alt="" /></a></li>
                                           <li><a href="#"><img src={footInsta} alt="" /></a></li>
