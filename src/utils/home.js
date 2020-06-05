@@ -69,7 +69,7 @@ const sections = {
                                                       {images && images.map((imageObj, idx) => (
                                                             <div className="col-4 col-sm-4 col-xl-3">
                                                                   <div className="logo">
-                                                                        <Img key={idx + 1} fluid={imageObj.fluid} className="d-block mx-auto" />
+                                                                        <img key={idx + 1} src={imageObj.file.url} className="d-block mx-auto" />
                                                                   </div>
                                                             </div>
                                                       ))}
