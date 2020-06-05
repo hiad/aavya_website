@@ -3,10 +3,10 @@ import { Link } from "gatsby";
 import fb from '../images/fb-social.svg';
 import insta from '../images/insta-social.svg';
 import twit from '../images/twit-social.svg';
-import shopify from '../images/foot-shopify.png';
-import klaviyo from '../images/foot-klaviyo.png';
-import footInsta from '../images/foot-insta.png';
-import footfb from '../images/foot-fb.png';
+import shopify from '../images/foot-shopify.svg';
+import klaviyo from '../images/foot-klaviyo.svg';
+import footInsta from '../images/foot-insta.svg';
+import footfb from '../images/foot-marketing.svg';
 
 const Footer = () => (
       <footer className="pt-3 pt-md-4">

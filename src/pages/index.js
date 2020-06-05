@@ -141,8 +141,8 @@ const IndexPage = () => {
     nodes {
       contentful_id
       logo {
-        fluid{
-          ...GatsbyContentfulFluid_withWebp
+        file{
+          url
         }
       }
       title
