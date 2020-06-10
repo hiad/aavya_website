@@ -40,7 +40,7 @@ const aboutPage = () => {
           }
         }
         images{
-          fluid{
+          fluid(maxWidth: 2500, quality: 100){
             ...GatsbyContentfulFluid_withWebp
           }
         }
