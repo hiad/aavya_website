@@ -47,10 +47,10 @@ const IndexPage = () => {
           }
         }
         image{
-          fluid{
+          fluid(quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          fixed{
+          fixed(quality: 100){
             ...GatsbyContentfulFixed_withWebp_noBase64
           }
           file{
@@ -58,7 +58,7 @@ const IndexPage = () => {
           }
         }
         images{
-          fluid{
+          fluid(quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           file{
@@ -78,7 +78,7 @@ const IndexPage = () => {
       }
       page
       image {
-        fluid{
+        fluid(quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
@@ -99,7 +99,7 @@ const IndexPage = () => {
         title
         urlAction
         image{
-          fluid{
+          fluid(quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
@@ -130,7 +130,7 @@ const IndexPage = () => {
         }
       }
       contentImage{
-        fluid{
+        fluid(quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }
