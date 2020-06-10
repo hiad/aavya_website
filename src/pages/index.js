@@ -47,10 +47,10 @@ const IndexPage = () => {
           }
         }
         image{
-          fluid(quality: 100){
+          fluid(maxWidth: 5000){
             ...GatsbyContentfulFluid_withWebp
           }
-          fixed(quality: 100){
+          fixed{
             ...GatsbyContentfulFixed_withWebp
           }
           file{
@@ -58,7 +58,7 @@ const IndexPage = () => {
           }
         }
         images{
-          fluid(quality: 100){
+          fluid(maxWidth: 5000){
             ...GatsbyContentfulFluid_withWebp
           }
           file{
@@ -78,7 +78,7 @@ const IndexPage = () => {
       }
       page
       image {
-        fluid(quality: 100){
+        fluid(maxWidth: 5000){
             ...GatsbyContentfulFluid_withWebp
           }
       }
@@ -99,7 +99,7 @@ const IndexPage = () => {
         title
         urlAction
         image{
-          fluid(quality: 100){
+          fluid(maxWidth: 5000){
             ...GatsbyContentfulFluid_withWebp
           }
         }
@@ -130,7 +130,7 @@ const IndexPage = () => {
         }
       }
       contentImage{
-        fluid(quality: 100){
+        fluid(maxWidth: 5000){
           ...GatsbyContentfulFluid_withWebp
         }
       }

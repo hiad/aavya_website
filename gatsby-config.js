@@ -1,3 +1,5 @@
+const { lazy } = require('react');
+
 const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
 
 
@@ -27,6 +29,19 @@ module.exports = {
         useMozJpeg: false,
         stripMetadata: true,
         defaultQuality: 100,
+        plugins: [
+          {
+            resolve: `gatsby-remark-images-contentful`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 5000,
+              sizeByPixelDensity: true,
+              loading: lazy,
+            },
+          },
+        ],
       },
     },
     `gatsby-plugin-sass`,
