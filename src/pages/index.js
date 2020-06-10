@@ -48,10 +48,10 @@ const IndexPage = () => {
         }
         image{
           fluid{
-            ...GatsbyContentfulFluid_withWebp
+            ...GatsbyImageSharpFixed_tracedSVG
           }
           fixed{
-            ...GatsbyContentfulFixed_withWebp
+            ...GatsbyImageSharpFixed_tracedSVG
           }
           file{
             url
@@ -59,7 +59,7 @@ const IndexPage = () => {
         }
         images{
           fluid{
-            ...GatsbyContentfulFluid_withWebp
+            ...GatsbyImageSharpFixed_tracedSVG
           }
           file{
             url
@@ -79,7 +79,7 @@ const IndexPage = () => {
       page
       image {
         fluid{
-            ...GatsbyContentfulFluid_withWebp
+            ...GatsbyImageSharpFixed_tracedSVG
           }
       }
       logo {
@@ -100,7 +100,7 @@ const IndexPage = () => {
         urlAction
         image{
           fluid{
-            ...GatsbyContentfulFluid_withWebp
+            ...GatsbyImageSharpFixed_tracedSVG
           }
         }
       }
@@ -131,7 +131,7 @@ const IndexPage = () => {
       }
       contentImage{
         fluid{
-          ...GatsbyContentfulFluid_withWebp
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
