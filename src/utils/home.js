@@ -148,7 +148,7 @@ const sections = {
                                                 name,
                                                 contentImage
                                           }, idx) => (
-                                                      <div className="row align-items-center ">
+                                                      <div className="align-items-center ">
                                                             {(idx % 2 !== 0) ? (
                                                                   <><div className="col-12 col-md-6  pr-md-3 pr-xl-5">
                                                                         <div className="txt-wrp text-center text-md-left">
