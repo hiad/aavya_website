@@ -1661,6 +1661,7 @@ footer {
 			right: 0;
 			left: 0;
 			top: 0;
+			z-index: -1;
 			background: url(../images/bg5-1.png) bottom left no-repeat;
 			@include media-breakpoint-down(md) {
 				background: url(../images/bg5-2.png) bottom left no-repeat;
@@ -3454,4 +3455,9 @@ footer {
 			min-width: 160px;
 		}
 	}
+}
+
+
+div#___gatsby {
+	overflow-x: hidden;
 }
