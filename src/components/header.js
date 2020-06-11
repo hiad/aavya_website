@@ -31,7 +31,7 @@ const Header = () => {
         <div className="act ml-auto ml-lg-0">
           <ul className="nav align-items-center">
             <li className="d-none d-lg-block"><a href="#">help</a></li>
-            <li><Link href="#" className="req-btn">Request Consultation</Link></li>
+            <li><Link href="#" className="req-btn d-none d-lg-block">Request Consultation</Link></li>
             <li className="d-none d-lg-block"><a href="#">EN</a></li>
           </ul>
         </div>
