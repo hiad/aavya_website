@@ -47,7 +47,7 @@ const IndexPage = () => {
           }
         }
         image{
-          fluid(maxWidth: 2000, quality: 100){
+          fluid(maxWidth: 1700, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           fixed{
@@ -58,7 +58,7 @@ const IndexPage = () => {
           }
         }
         images{
-          fluid(maxWidth: 2000, quality: 100){
+          fluid(maxWidth: 1700, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           file{
@@ -78,7 +78,7 @@ const IndexPage = () => {
       }
       page
       image {
-        fluid(maxWidth: 2000, quality: 100){
+        fluid(maxWidth: 1700, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
@@ -99,7 +99,7 @@ const IndexPage = () => {
         title
         urlAction
         image{
-          fluid(maxWidth: 2000, quality: 100){
+          fluid(maxWidth: 1700,quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
@@ -130,7 +130,7 @@ const IndexPage = () => {
         }
       }
       contentImage{
-        fluid(maxWidth: 2000, quality: 100){
+        fluid(maxWidth: 1700, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }
@@ -144,7 +144,7 @@ const IndexPage = () => {
         file{
           url
         }
-        fluid(maxWidth: 2000, quality: 100){
+        fluid(maxWidth: 1700, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }

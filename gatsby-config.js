@@ -28,20 +28,8 @@ module.exports = {
       options: {
         useMozJpeg: false,
         stripMetadata: true,
+        srcSetBreakpoints: [200, 400, 800, 100],
         defaultQuality: 100,
-        plugins: [
-          {
-            resolve: `gatsby-remark-images-contentful`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 5000,
-              sizeByPixelDensity: true,
-              loading: lazy,
-            },
-          },
-        ],
       },
     },
     `gatsby-plugin-sass`,
