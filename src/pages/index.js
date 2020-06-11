@@ -51,7 +51,7 @@ const IndexPage = () => {
             ...GatsbyContentfulFluid_withWebp
           }
           fixed{
-            ...GatsbyContentfulFluid_withWebp
+            ...GatsbyContentfulFixed_withWebp
           }
           file{
             url
