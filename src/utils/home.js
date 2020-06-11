@@ -140,7 +140,7 @@ const sections = {
                                     <h2 className="mb-50 font-weight-normal">{title}</h2>
                                     <h4 className="mb-0 font-weight-normal">{subtitle}</h4>
                               </div>
-                              <div className="row align-items-center mb-5 mb-xl-0">
+                              <div className="align-items-center mb-5 mb-xl-0">
                                     {
                                           caseStudies.map(({
                                                 description,
@@ -148,7 +148,7 @@ const sections = {
                                                 name,
                                                 contentImage
                                           }, idx) => (
-                                                      <div className="align-items-center ">
+                                                      <div className="row align-items-center ">
                                                             {(idx % 2 !== 0) ? (
                                                                   <><div className="col-12 col-md-6  pr-md-3 pr-xl-5">
                                                                         <div className="txt-wrp text-center text-md-left">
