@@ -144,6 +144,9 @@ const IndexPage = () => {
         file{
           url
         }
+        fluid(maxWidth: 2000, quality: 100){
+          ...GatsbyContentfulFluid_withWebp_noBase64
+        }
       }
       title
     }

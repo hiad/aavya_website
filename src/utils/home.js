@@ -249,7 +249,7 @@ const sections = {
                                           <div className="row">
                                                 {parners && parners.map(({ logo }) => (
                                                       <div className="col-4 col-md-4 col-lg-3">
-                                                            <div className="part-logo"><img src={logo[0].file.url} alt="" /></div>
+                                                            <div className="part-logo"><Img fluid={logo[0].fluid} alt="" /></div>
                                                       </div>
                                                 ))}
 
