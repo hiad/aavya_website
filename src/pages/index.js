@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby';
 import { Slider, sections } from '../pagesUtils/home';
-import loadable from '@loadable/component'
-
-const Layout = loadable(() => import("../components/layout"));
+import Layout from "../components/layout";
 
 const gettingHomeJSX = ({
   allContentfulSections,
