@@ -189,7 +189,7 @@ const IndexPage = () => {
         file {
           url
         }
-        fixed(maxHeight: 50, quality: 100){
+        fixed(height: 50, quality: 100){
             ...GatsbyContentfulFixed_withWebp_noBase64
           }
           fluid(maxWidth: 1000, quality: 100){

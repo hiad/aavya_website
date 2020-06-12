@@ -1,11 +1,10 @@
-import React, { lazy } from "react"
+import React from "react"
 import { Link } from "gatsby";
+import Tabs from "../components/tabs";
+import SliderComponent from "../components/slider";
 import Img from "gatsby-image";
 import sources from "../utils/images";
-import loadable from '@loadable/component'
 
-const Tabs = loadable(() => import("../components/tabs"));
-const SliderComponent = loadable(() => import("../components/slider"));
 
 
 //TODO: Fix responsive images
@@ -252,7 +251,7 @@ const sections = {
                                           <div className="row">
                                                 {parners && parners.map(({ logo }) => (
                                                       <div className="col-4 col-md-4 col-lg-3">
-                                                            <div className="part-logo"><Img fluid={logo[0].fluid} alt="" /></div>
+                                                            {/* <div className="part-logo"><Img fluid={logo[0].fluid} alt="" /></div> */}
                                                       </div>
                                                 ))}
 
@@ -281,7 +280,7 @@ const sections = {
                                                       <h2 className="mb-0">"</h2>
                                                       <h6 className="mb-15">{description.description}</h6>
                                                       <div className="media align-items-center">
-                                                            <Img flex={authorImage.file.url} className="mr-15 mr-lg-25" alt="..." />
+                                                            <img src={authorImage.file.url} className="mr-15 mr-lg-25" alt="..." />
                                                             <div className="media-body">
                                                                   <h6 className="m-0">{author}</h6>
                                                                   <p className="mb-0">{authorSubTitle}</p>
