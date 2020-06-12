@@ -281,7 +281,7 @@ const sections = {
                                                       <h2 className="mb-0">"</h2>
                                                       <h6 className="mb-15">{description.description}</h6>
                                                       <div className="media align-items-center">
-                                                            <img src={authorImage.file.url} className="mr-15 mr-lg-25" alt="..." />
+                                                            <Img flex={authorImage.file.url} className="mr-15 mr-lg-25" alt="..." />
                                                             <div className="media-body">
                                                                   <h6 className="m-0">{author}</h6>
                                                                   <p className="mb-0">{authorSubTitle}</p>
