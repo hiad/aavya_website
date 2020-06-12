@@ -42,13 +42,13 @@ const Services = () => {
           }
         }
         image{
-          fluid(maxWidth: 1700, quality: 100){
+          fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
            mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 2000, quality: 100){
+          desktop: fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           fixed{
@@ -59,13 +59,13 @@ const Services = () => {
           }
         }
         images{
-          fluid(maxWidth: 1700, quality: 100){
+          fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
            mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 2000, quality: 100){
+          desktop: fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           file{
@@ -86,13 +86,13 @@ const Services = () => {
       page
       className
       image {
-        fluid(maxWidth: 1700, quality: 100){
+        fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
            mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 2000, quality: 100){
+          desktop: fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }

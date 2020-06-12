@@ -40,13 +40,13 @@ const aboutPage = () => {
           }
         }
         images{
-          fluid(maxWidth: 1700, quality: 100){
+          fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
            mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 2000, quality: 100){
+          desktop: fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
