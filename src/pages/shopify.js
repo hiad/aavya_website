@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby';
-import { sections } from '../utils/shopify';
+import { sections } from '../pagesUtils/shopify';
 
 import Layout from "../components/layout";
 

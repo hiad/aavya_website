@@ -28,7 +28,6 @@ module.exports = {
       options: {
         useMozJpeg: false,
         stripMetadata: true,
-        srcSetBreakpoints: [200, 400, 800, 100],
         defaultQuality: 100,
       },
     },

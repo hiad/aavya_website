@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby';
-import { Slider, sections } from '../utils/home';
+import { Slider, sections } from '../pagesUtils/home';
 import Layout from "../components/layout";
 
 const gettingHomeJSX = ({
@@ -47,11 +47,17 @@ const IndexPage = () => {
           }
         }
         image{
+          fixed{
+            ...GatsbyContentfulFixed_withWebp
+          }
           fluid(maxWidth: 1700, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          fixed{
-            ...GatsbyContentfulFixed_withWebp
+          mobile: fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 2000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
           }
           file{
             url
@@ -59,6 +65,12 @@ const IndexPage = () => {
         }
         images{
           fluid(maxWidth: 1700, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+           mobile: fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 2000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           file{
@@ -78,7 +90,10 @@ const IndexPage = () => {
       }
       page
       image {
-        fluid(maxWidth: 1700, quality: 100){
+        mobile: fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 2000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
@@ -99,7 +114,10 @@ const IndexPage = () => {
         title
         urlAction
         image{
-          fluid(maxWidth: 1700,quality: 100){
+          mobile: fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 2000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
@@ -133,6 +151,12 @@ const IndexPage = () => {
         fluid(maxWidth: 1700, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
+        mobile: fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 2000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
       }
     }
   }
@@ -147,6 +171,12 @@ const IndexPage = () => {
         fluid(maxWidth: 1700, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
+        mobile: fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 2000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
       }
       title
     }

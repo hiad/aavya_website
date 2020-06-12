@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Img from "gatsby-image";
+import sources from "../utils/images";
 
 const TabsComponent = ({
       tabs
@@ -51,7 +52,7 @@ const TabsComponent = ({
                                                 </div>
                                                 <div className="col-12 col-md-7 col-lg-8 order-md-1">
                                                       <div className="result-img text-center">
-                                                            {image && <Img fluid={image.fluid} alt="" className="mw-100" />}
+                                                      {image && <Img fluid={sources(image)} alt="" className="mw-100" />}
                                                       </div>
                                                 </div>
                                           </div>}
@@ -66,7 +67,7 @@ const TabsComponent = ({
                                                       <div class="row align-items-center">
                                                             <div class="col-12 col-md-6">
                                                                   <div class="result-img text-center">
-                                                                        {image && <Img fluid={image.fluid} alt="" className="mw-100 shadow-img" />}
+                                                                  {image && <Img fluid={sources(image)} alt="" className="mw-100 shadow-img" />}
                                                                   </div>
                                                             </div>
                                                             <div class="col-12 col-md-6 pl-lg-3 pl-xl-5">
@@ -94,7 +95,7 @@ const TabsComponent = ({
                                                       <div class="row align-items-center">
                                                             <div class="col-12 col-md-6 order-md-2">
                                                                   <div class="result-img text-center">
-                                                                        {image && <Img fluid={image.fluid} alt="" className="mw-100 shadow-img" />}
+                                                                  {image && <Img fluid={sources(image)} alt="" className="mw-100 shadow-img" />}
                                                                   </div>
                                                             </div>
                                                             <div class="col-12 col-md-6 pr-lg-3 pr-xl-5 order-md-1">
@@ -124,7 +125,7 @@ const TabsComponent = ({
                                                       <div class="row align-items-center">
                                                             <div class="col-12 col-md-6">
                                                                   <div class="result-img text-center">
-                                                                        {image && <Img fluid={image.fluid} alt="" className="mw-100 shadow-img" />}
+                                                                  {image && <Img fluid={sources(image)} alt="" className="mw-100 shadow-img" />}
                                                                   </div>
                                                             </div>
                                                             <div class="col-12 col-md-6 pl-lg-3 pl-xl-5">
@@ -152,7 +153,7 @@ const TabsComponent = ({
                                                       <div class="row align-items-center">
                                                             <div class="col-12 col-md-6 order-md-2">
                                                                   <div class="result-img text-center">
-                                                                        {image && <Img fluid={image.fluid} alt="" className="mw-100 shadow-img" />}
+                                                                  {image && <Img fluid={sources(image)} alt="" className="mw-100 shadow-img" />}
                                                                   </div>
                                                             </div>
                                                             <div class="col-12 col-md-6 pr-lg-3 pr-xl-5 order-md-1">
@@ -180,7 +181,7 @@ const TabsComponent = ({
                                                       <div class="row align-items-center">
                                                             <div class="col-12 col-md-6">
                                                                   <div class="result-img text-center">
-                                                                        {image && <Img fluid={image.fluid} alt="" className="mw-100 shadow-img" />}
+                                                                  {image && <Img fluid={sources(image)} alt="" className="mw-100 shadow-img" />}
                                                                   </div>
                                                             </div>
                                                             <div class="col-12 col-md-6 pl-lg-3 pl-xl-5">
@@ -209,7 +210,7 @@ const TabsComponent = ({
                                                       <div class="row align-items-center">
                                                             <div class="col-12 col-md-6 order-md-2">
                                                                   <div class="result-img text-center">
-                                                                        {image && <Img fluid={image.fluid} alt="" className="mw-100 shadow-img" />}
+                                                                  {image && <Img fluid={sources(image)} alt="" className="mw-100 shadow-img" />}
                                                                   </div>
                                                             </div>
                                                             <div class="col-12 col-md-6 pr-lg-3 pr-xl-5 order-md-1">

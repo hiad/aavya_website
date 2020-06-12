@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby';
-import { Slider, sections } from '../utils/services';
+import { Slider, sections } from '../pagesUtils/services';
 import Layout from "../components/layout";
 
 const gettingServicesJSX = ({
