@@ -1,11 +1,11 @@
-import React, { lazy, Suspense } from "react"
+import React, { lazy } from "react"
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 import sources from "../utils/images";
-const renderLoader = () => <p>Loading</p>;
+import loadable from '@loadable/component'
 
-const Tabs = lazy(() => import("../components/tabs"));
-const SliderComponent = lazy(() => import("../components/slider"));
+const Tabs = loadable(() => import("../components/tabs"));
+const SliderComponent = loadable(() => import("../components/slider"));
 
 
 //TODO: Fix responsive images
@@ -125,9 +125,7 @@ const sections = {
                                     <h2 className="mb-50 font-weight-normal">{title}</h2>
                                     <h4 className="mb-0 font-weight-normal">{subtitle}</h4>
                               </div>
-                              <Suspense fallback={renderLoader()}>
-                                    <Tabs tabs={tabs} />
-                              </Suspense>
+                              <Tabs tabs={tabs} />
                         </div>
                   </section>
             ),
@@ -276,24 +274,22 @@ const sections = {
                               <div className="sec-title mb-3 mb-lg-4 text-center max mx-auto">
                                     <h2 className="mb-0 font-weight-normal">{title}</h2>
                               </div>
-                              <Suspense fallback={renderLoader()}>
-                                    <SliderComponent>
-                                          {testimonials && testimonials.map(({ author, authorImage, authorSubTitle, description }) => (
-                                                <div className="item">
-                                                      <div className="testi-blk bg-white px-15 px-md-3 py-2 py-md-3">
-                                                            <h2 className="mb-0">"</h2>
-                                                            <h6 className="mb-15">{description.description}</h6>
-                                                            <div className="media align-items-center">
-                                                                  <img src={authorImage.file.url} className="mr-15 mr-lg-25" alt="..." />
-                                                                  <div className="media-body">
-                                                                        <h6 className="m-0">{author}</h6>
-                                                                        <p className="mb-0">{authorSubTitle}</p>
-                                                                  </div>
+                              <SliderComponent>
+                                    {testimonials && testimonials.map(({ author, authorImage, authorSubTitle, description }) => (
+                                          <div className="item">
+                                                <div className="testi-blk bg-white px-15 px-md-3 py-2 py-md-3">
+                                                      <h2 className="mb-0">"</h2>
+                                                      <h6 className="mb-15">{description.description}</h6>
+                                                      <div className="media align-items-center">
+                                                            <img src={authorImage.file.url} className="mr-15 mr-lg-25" alt="..." />
+                                                            <div className="media-body">
+                                                                  <h6 className="m-0">{author}</h6>
+                                                                  <p className="mb-0">{authorSubTitle}</p>
                                                             </div>
                                                       </div>
-                                                </div>))}
-                                    </SliderComponent>
-                              </Suspense>
+                                                </div>
+                                          </div>))}
+                              </SliderComponent>
                         </div>
                   </section>
             ),
