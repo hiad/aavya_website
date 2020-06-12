@@ -50,13 +50,10 @@ const IndexPage = () => {
           fixed{
             ...GatsbyContentfulFixed_withWebp
           }
-          fluid(maxWidth: 2000, quality: 100){
+          fluid(maxWidth: 1000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           mobile: fluid(maxWidth: 1000, quality: 100){
-            ...GatsbyContentfulFluid_withWebp_noBase64
-          }
-          tablet: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 2000, quality: 100){
@@ -67,13 +64,10 @@ const IndexPage = () => {
           }
         }
         images{
-          fluid(maxWidth: 2000, quality: 100){
+          fluid(maxWidth: 1000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           mobile: fluid(maxWidth: 1000, quality: 100){
-            ...GatsbyContentfulFluid_withWebp_noBase64
-          }
-          tablet: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 2000, quality: 100){
@@ -96,10 +90,7 @@ const IndexPage = () => {
       }
       page
       image {
-          mobile: fluid(maxWidth: 1000, quality: 100){
-            ...GatsbyContentfulFluid_withWebp_noBase64
-          }
-          tablet: fluid(maxWidth: 1500, quality: 100){
+        mobile: fluid(maxWidth: 1000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 2000, quality: 100){
@@ -124,9 +115,6 @@ const IndexPage = () => {
         urlAction
         image{
           mobile: fluid(maxWidth: 1000, quality: 100){
-            ...GatsbyContentfulFluid_withWebp_noBase64
-          }
-          tablet: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 2000, quality: 100){
@@ -160,13 +148,10 @@ const IndexPage = () => {
         }
       }
       contentImage{
-        fluid(maxWidth: 2000, quality: 100){
+        fluid(maxWidth: 1000, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
-          mobile: fluid(maxWidth: 1000, quality: 100){
-            ...GatsbyContentfulFluid_withWebp_noBase64
-          }
-          tablet: fluid(maxWidth: 1500, quality: 100){
+        mobile: fluid(maxWidth: 1000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 2000, quality: 100){
@@ -183,13 +168,10 @@ const IndexPage = () => {
         file{
           url
         }
-        fluid(maxWidth: 2000, quality: 100){
+        fluid(maxWidth: 1000, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
-          mobile: fluid(maxWidth: 1000, quality: 100){
-            ...GatsbyContentfulFluid_withWebp_noBase64
-          }
-          tablet: fluid(maxWidth: 1500, quality: 100){
+        mobile: fluid(maxWidth: 1000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 2000, quality: 100){
@@ -207,10 +189,7 @@ const IndexPage = () => {
         file {
           url
         }
-          mobile: fluid(maxWidth: 1000, quality: 100){
-            ...GatsbyContentfulFluid_withWebp_noBase64
-          }
-          tablet: fluid(maxWidth: 1500, quality: 100){
+        mobile: fluid(maxWidth: 1000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 2000, quality: 100){
