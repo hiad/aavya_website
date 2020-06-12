@@ -1,7 +1,9 @@
 import React from "react";
-import Slider from "react-slick";
+import loadable from '@loadable/component'
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
+
+const Slider = loadable(() => import("react-slick"));
 
 const SliderComponent = ({ children }) => {
       const settings = {
