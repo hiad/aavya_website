@@ -6,21 +6,21 @@ import Layout from "../components/layout";
 
 const gettingJSX = ({ allContentfulSections, allContentfulSuccessStories }) => {
 
-      const jsx = allContentfulSections.edges.map(({ node }) => {
-            const nodeToSend = {
-                  ...node,
-                  successCases: allContentfulSuccessStories,
-            };
+  const jsx = allContentfulSections.edges.map(({ node }) => {
+    const nodeToSend = {
+      ...node,
+      successCases: allContentfulSuccessStories,
+    };
 
-            const fxnNode = node.cssClass ? sections[node.cssClass] : sections['default'];
-            return fxnNode ? fxnNode(nodeToSend) : ('<></>');
-      });
+    const fxnNode = node.cssClass ? sections[node.cssClass] : sections['default'];
+    return fxnNode ? fxnNode(nodeToSend) : ('<></>');
+  });
 
-      return jsx;
+  return jsx;
 };
 
 const shopifyPage = () => {
-      const data = useStaticQuery(graphql`{
+  const data = useStaticQuery(graphql`{
   allContentfulSections(filter: {page: {eq: "shopify"}}, sort: {fields: order}) {
     edges {
       node {
@@ -43,7 +43,10 @@ const shopifyPage = () => {
           fluid(maxWidth: 1700, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-           mobile: fluid(maxWidth: 768, quality: 100){
+          mobile: fluid(maxWidth: 768, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          tablet: fluid(maxWidth: 1280, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 1920, quality: 100){
@@ -57,7 +60,10 @@ const shopifyPage = () => {
           fluid(maxWidth: 1700, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-           mobile: fluid(maxWidth: 768, quality: 100){
+          mobile: fluid(maxWidth: 768, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          tablet: fluid(maxWidth: 1280, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 1920, quality: 100){
@@ -111,21 +117,24 @@ const shopifyPage = () => {
         }
       }
       image {
-        fluid{
-             ...GatsbyContentfulFluid_withWebp 
-        }
+        mobile: fluid(maxWidth: 768, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          tablet: fluid(maxWidth: 1280, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
       }
     }
   }
 
   }`);
 
-      const jsx = data && gettingJSX(data);
-      return (
-            <Layout>
-                  {jsx}
-            </Layout>
-      )
+  const jsx = data && gettingJSX(data);
+  return (
+    <Layout>
+      {jsx}
+    </Layout>
+  )
 };
 
 export default shopifyPage;

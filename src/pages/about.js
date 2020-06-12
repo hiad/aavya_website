@@ -43,7 +43,10 @@ const aboutPage = () => {
           fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-           mobile: fluid(maxWidth: 768, quality: 100){
+          mobile: fluid(maxWidth: 768, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          tablet: fluid(maxWidth: 1280, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 1920, quality: 100){
