@@ -50,13 +50,13 @@ const IndexPage = () => {
           fixed{
             ...GatsbyContentfulFixed_withWebp
           }
-          fluid(maxWidth: 1920, quality: 100){
+          fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 1920, quality: 100){
+          desktop: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           file{
@@ -64,13 +64,13 @@ const IndexPage = () => {
           }
         }
         images{
-          fluid(maxWidth: 1920, quality: 100){
+          fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
            mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 1920, quality: 100){
+          desktop: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           file{
@@ -93,7 +93,7 @@ const IndexPage = () => {
         mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 1920, quality: 100){
+          desktop: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
@@ -117,7 +117,7 @@ const IndexPage = () => {
           mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 1920, quality: 100){
+          desktop: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
@@ -148,13 +148,13 @@ const IndexPage = () => {
         }
       }
       contentImage{
-        fluid(maxWidth: 1920, quality: 100){
+        fluid(maxWidth: 1500, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
         mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 1920, quality: 100){
+          desktop: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
@@ -168,13 +168,13 @@ const IndexPage = () => {
         file{
           url
         }
-        fluid(maxWidth: 1920, quality: 100){
+        fluid(maxWidth: 1500, quality: 100){
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
         mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 1920, quality: 100){
+          desktop: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
@@ -192,7 +192,7 @@ const IndexPage = () => {
         mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-          desktop: fluid(maxWidth: 1920, quality: 100){
+          desktop: fluid(maxWidth: 1500, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
