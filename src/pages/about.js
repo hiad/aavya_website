@@ -40,8 +40,14 @@ const aboutPage = () => {
           }
         }
         images{
-          fluid(maxWidth: 2500, quality: 100){
-            ...GatsbyContentfulFluid_withWebp
+          fluid(maxWidth: 1700, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+           mobile: fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 2000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
       }
