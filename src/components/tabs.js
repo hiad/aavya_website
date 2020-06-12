@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import Img from "gatsby-image";
 import sources from "../utils/images";
 
