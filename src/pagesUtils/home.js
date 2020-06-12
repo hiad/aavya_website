@@ -1,10 +1,10 @@
-import React from "react"
+import React, { lazy } from "react"
 import { Link } from "gatsby";
-import Tabs from "../components/tabs";
-import SliderComponent from "../components/slider";
 import Img from "gatsby-image";
 import sources from "../utils/images";
 
+const Tabs = lazy(() => import("../components/tabs"));
+const SliderComponent = lazy(() => import("../components/slider"));
 
 
 //TODO: Fix responsive images
