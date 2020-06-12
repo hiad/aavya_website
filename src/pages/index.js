@@ -1,7 +1,9 @@
-import React from "react"
+import React, { lazy, Suspense } from "react"
 import { graphql, useStaticQuery } from 'gatsby';
 import { Slider, sections } from '../pagesUtils/home';
-import Layout from "../components/layout";
+const renderLoader = () => <p>Loading</p>;
+
+const Layout = lazy(() => import("../components/layout"));
 
 const gettingHomeJSX = ({
   allContentfulSections,
@@ -208,10 +210,12 @@ const IndexPage = () => {
   const slider = data ? Slider(data.allContentfulSlider.edges[0].node) : '';
   const homeJSX = data && gettingHomeJSX(data);
   return (
-    <Layout>
-      {slider}
-      {homeJSX}
-    </Layout>
+    <Suspense fallback={renderLoader()}>
+      <Layout>
+        {slider}
+        {homeJSX}
+      </Layout>
+    </Suspense>
   )
 };
 
