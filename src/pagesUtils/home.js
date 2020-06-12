@@ -211,7 +211,6 @@ const sections = {
                                                       </div>
                                                       <div className="col-12 col-md-6">
                                                             <div className="serve-img text-center">
-                                                                  {console.log(images[idx])}
                                                                   <Img fluid={sources(images[idx])} alt="" className="mw-100" />
                                                             </div>
                                                       </div>
