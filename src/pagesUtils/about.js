@@ -1,4 +1,3 @@
-// import { Link } from "gatsby";
 import React from "react"
 import aavya from '../images/Aavya.svg';
 import Img from "gatsby-image";
