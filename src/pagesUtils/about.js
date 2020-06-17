@@ -40,7 +40,7 @@ const sections = {
                                                 <div class="col-12 col-md-6 pr-lg-4 pr-x-7">
                                                       <div class="txt-wrp text-center text-md-left">
                                                             <h2 class="mb-1 mb-md-2 font-weight-normal">{title}</h2>
-                                                            <p class="mb-2 mb-md-0">Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim. Nullam pulvinar felis at metus malesuada, nec convallis lacus commodo. Duis blandit neque purus, nec auctor mi sollicitudin nec. Duis urna ipsum, tincidunt at euismod ut, placerat eget urna. Curabitur nec faucibus leo, et laoreet nibh. Pellentesque euismod quam at eros efficitur, vitae venenatis sem consectetur. Donec ut risus ultricies, dictum neque at, bibendum purus. In hac habitasse platea dictumst.</p>
+                                                            <p class="mb-2 mb-md-0">{data.data[0].name}</p>
                                                       </div>
                                                 </div>
                                                 <div class="col-12 col-md-6">
@@ -57,8 +57,8 @@ const sections = {
                               <div class="row align-items-center mb-5">
                                     <div class="col-12 col-md-6 order-md-2 pl-lg-4 pl-x-7">
                                           <div class="txt-wrp text-center text-md-left">
-                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[0].name}</h2>
-                                                <p class="mb-2 mb-md-0">{data.data[0].value}</p>
+                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[1].value}</h2>
+                                                <p class="mb-2 mb-md-0">{data.data[1].name}</p>
                                           </div>
                                     </div>
                                     <div class="col-12 col-md-6 order-md-1">
@@ -70,8 +70,8 @@ const sections = {
                               <div class="row align-items-center mb-5">
                                     <div class="col-12 col-md-6 pr-lg-4 pr-x-7">
                                           <div class="txt-wrp text-center text-md-left">
-                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[1].value}</h2>
-                                                <p class="mb-2 mb-md-0">{data.data[1].name}</p>
+                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[2].value}</h2>
+                                                <p class="mb-2 mb-md-0">{data.data[2].name}</p>
                                           </div>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -83,8 +83,8 @@ const sections = {
                               <div class="row align-items-center mb-5">
                                     <div class="col-12 col-md-6 order-md-2 pl-lg-4 pl-x-7">
                                           <div class="txt-wrp text-center text-md-left">
-                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[2].value}</h2>
-                                                <p class="mb-2 mb-md-0">{data.data[2].name}</p>
+                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[3].value}</h2>
+                                                <p class="mb-2 mb-md-0">{data.data[3].name}</p>
                                           </div>
                                     </div>
                                     <div class="col-12 col-md-6 order-md-1">
@@ -96,8 +96,8 @@ const sections = {
                               <div class="row align-items-center">
                                     <div class="col-12 col-md-6 pr-lg-4 pr-x-7">
                                           <div class="txt-wrp text-center text-md-left">
-                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[3].value}</h2>
-                                                <p class="mb-2 mb-md-0">{data.data[3].name}</p>
+                                                <h2 class="mb-1 mb-md-2 font-weight-normal">{data.data[4].value}</h2>
+                                                <p class="mb-2 mb-md-0">{data.data[4].name}</p>
                                           </div>
                                     </div>
                                     <div class="col-12 col-md-6">
