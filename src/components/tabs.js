@@ -27,7 +27,7 @@ const TabsComponent = ({
                         }) => (
                                     <Tab>
                                           {logo && <img src={logo.file.url} alt="" />}
-                                          <span dangerouslySetInnerHTML={{ __html: tab }}></span>
+                                          <span className={pageClassName === 'services' && 'isBlack'} dangerouslySetInnerHTML={{ __html: tab }}></span>
                                     </Tab>
                               ))}
                   </TabList>

@@ -29,9 +29,9 @@ const sections = {
                         <div class="bnr-img">
                               <div class="container">
                                     <div class="row align-items-center">
-                                          <div class="col-12 col-md-7 col-xxl-6 ml-auto">
+                                          <div class="col-12 col-md-7 ml-auto">
                                                 <div class="img-pos round-img text-left text-md-right">
-                                                      <Img fluid={image.fluid} alt="" class="mw-100 d-inline-block" />
+                                                      <Img fluid={image.fluid} alt="" class="d-inline-block" />
                                                 </div>
                                           </div>
                                     </div>
@@ -54,7 +54,7 @@ const sections = {
                                     </div>
                               </div>
                         </section>
-                        <Tabs tabs={tabs} />
+                        <Tabs isServices tabs={tabs} />
                   </>
             ),
       'impect-sec': ({
