@@ -1427,7 +1427,7 @@ footer {
 }
 
 .react-tabs .isBlack {
-    color: black;
+	color: black;
 }
 
 .services {
@@ -1645,6 +1645,21 @@ footer {
 }
 .case-sec {
 	position: relative;
+	.log-img {
+		img {
+			max-height: 50px;
+			z-index: 2;
+			@include media-breakpoint-down(lg) {
+				max-height: 50px;
+				z-index: 2;
+			}
+			@include media-breakpoint-down(sm) {
+				max-height: 40px;
+				z-index: 2;
+			}
+		}
+	}
+
 	.bg {
 		position: absolute;
 		bottom: 0;
@@ -1677,18 +1692,6 @@ footer {
 	}
 	:not(.bg) {
 		z-index: 1;
-	}
-	.log-img {
-		img {
-			@include media-breakpoint-down(lg) {
-				max-height: 50px;
-				z-index: 2;
-			}
-			@include media-breakpoint-down(sm) {
-				max-height: 40px;
-				z-index: 2;
-			}
-		}
 	}
 }
 .study-link {
@@ -3460,7 +3463,6 @@ footer {
 		}
 	}
 }
-
 
 div#___gatsby {
 	overflow-x: hidden;
