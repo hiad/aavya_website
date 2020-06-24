@@ -5,7 +5,7 @@ import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
 const Slider = loadable(() => import("react-slick"));
 
-const SliderComponent = ({ children }) => {
+const SliderComponent = ({ children, settingsAsProp }) => {
       const settings = {
             dots: true,
             infinite: true,
@@ -34,6 +34,7 @@ const SliderComponent = ({ children }) => {
                         },
                   },
             ],
+            ...settingsAsProp,
       };
       return (
             <Slider {...settings}>
