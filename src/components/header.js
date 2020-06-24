@@ -45,7 +45,7 @@ const Header = () => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav className="mean-container" navbar>
             <NavItem>
-              <NavLink className="menu-link" href="/components/">About</NavLink>
+              <NavLink className="menu-link" href="/about">About</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/">Solutions</NavLink>

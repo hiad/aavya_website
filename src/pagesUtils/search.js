@@ -1,5 +1,7 @@
 import React from "react"
 import Img from "gatsby-image";
+import parner from '../images/svg/partner.svg';
+import blueprint from '../images/svg/blueprint.svg';
 
 const sections = {
       'banner': ({
@@ -50,8 +52,10 @@ const sections = {
                               <div class="serv-head w-500 d-flex flex-wrap align-items-center mb-4 mb-md-6 mb-lg-8">
                                     <h4 class="text-right w-50">{title}</h4>
                                     <div class="serv-b d-flex align-items-center two">
-                                          <div class="serv-logo"><img src="images/svg/partner.svg" alt="" class="mw-100 d-block mx-auto" /></div>
-                                          <div class="serv-logo"><img src="images/svg/blueprint.svg" alt="" class="mw-100 d-block mx-auto" /></div>
+                                          <div class="serv-logo">
+                                                <img src={parner} alt="" class="mw-100 d-block mx-auto" /></div>
+                                          <div class="serv-logo">
+                                                <img src={blueprint} alt="" class="mw-100 d-block mx-auto" /></div>
                                     </div>
                               </div>
                               <div class="sec-title mb-4 mb-md-5 mb-lg-6 text-center">
