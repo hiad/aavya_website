@@ -4,6 +4,7 @@ import partners from '../images/svg/partner.svg';
 import optimizely from '../images/svg/optimizely.svg';
 import vwo from '../images/svg/vwo.svg';
 import SliderComponent from "../components/slider";
+import Tabs from "../components/tabs";
 
 const settings = {
       dots: true,
@@ -167,6 +168,7 @@ const sections = {
             ),
       'story-cont': ({
             title,
+            tabs,
       }) => (
                   <section class="story-cont pt-4 pt-md-7 pt-lg-10 mt-10 mt-lg-6">
                         <div class="bg"></div>
@@ -174,30 +176,7 @@ const sections = {
                               <div class="sec-title mb-2 text-center max mx-auto">
                                     <h2 class="mb-0 font-weight-normal">{title}</h2>
                               </div>
-                              <nav role='navigation' class="transformer-tabs mb-1 mb-lg-2 d-none d-lg-block">
-                                    <ul>
-                                          <li>
-                                                <a href="#tab-1" class="active">
-                                                      <span>Customer Retention</span>
-                                                </a>
-                                          </li>
-                                          <li>
-                                                <a href="#tab-2">
-                                                      <span>Service</span>
-                                                </a>
-                                          </li>
-                                          <li>
-                                                <a href="#tab-3">
-                                                      <span>ECommerce</span>
-                                                </a>
-                                          </li>
-                                          <li>
-                                                <a href="#tab-4">
-                                                      <span>General</span>
-                                                </a>
-                                          </li>
-                                    </ul>
-                              </nav>
+                              <Tabs tabs={tabs} />
                         </div>
                         <div class="container">
                               <div class="owl-carousel owl-theme story-carousel mb-3 mb-md-5 mb-lg-7">

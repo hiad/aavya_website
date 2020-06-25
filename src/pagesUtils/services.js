@@ -54,7 +54,7 @@ const sections = {
                                     </div>
                               </div>
                         </section>
-                        <Tabs isServices tabs={tabs} />
+                        <Tabs tabs={tabs} />
                   </>
             ),
       'impect-sec': ({

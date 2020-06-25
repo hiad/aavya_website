@@ -4,11 +4,12 @@ import { sections } from '../pagesUtils/cro';
 
 import Layout from "../components/layout";
 
-const gettingJSX = ({ allContentfulSections, allContentfulSuccessStories, allContentfulSlider }) => {
+const gettingJSX = ({ allContentfulSections, allContentfulTabs ,allContentfulSuccessStories, allContentfulSlider }) => {
 
   const jsx = allContentfulSections.edges.map(({ node }) => {
     const nodeToSend = {
       ...node,
+      tabs: allContentfulTabs,
       slider: allContentfulSlider.edges,
       successCases: allContentfulSuccessStories,
     };
@@ -126,6 +127,35 @@ const croPage = () => {
             value
             end
           }
+        }
+      }
+    }
+  }
+
+  allContentfulTabs(filter: {page: {eq: "cro"}}, sort: {fields: order}) {
+    nodes {
+      tab
+      title
+      subTitle
+      text {
+        text
+      }
+      page
+      className
+      image {
+        fluid(maxWidth: 1920, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+           mobile: fluid(maxWidth: 768, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 1920, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+      }
+      logo {
+        file {
+          url
         }
       }
     }
