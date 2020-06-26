@@ -169,6 +169,7 @@ const sections = {
       'story-cont': ({
             title,
             tabs,
+            caseStudies,
       }) => (
                   <section class="story-cont pt-4 pt-md-7 pt-lg-10 mt-10 mt-lg-6">
                         <div class="bg"></div>
@@ -177,6 +178,7 @@ const sections = {
                                     <h2 class="mb-0 font-weight-normal">{title}</h2>
                               </div>
                               <Tabs tabs={tabs} />
+
                         </div>
                         <div class="container">
                               <div class="owl-carousel owl-theme story-carousel mb-3 mb-md-5 mb-lg-7">
@@ -190,160 +192,105 @@ const sections = {
                               <div class="sec-title mb-3 mb-lg-5 text-center max mx-auto">
                                     <h2 class="mb-0 font-weight-normal">Finding Solutions - That's what we do!</h2>
                               </div>
-                              <div class="txt-wrp d-block d-md-none text-center">
-                                    <h2 class="mb-1 mb-md-2 font-weight-normal">BrüMate</h2>
-                                    <p class="mb-1 mb-md-2 mb-lg-3">Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit amet mattis. Ut vel tristique neque. Praesent purus eros, aliquet sit amet venenatis in, sodales in odio. Curabitur ac ligula et purus cursus vulputate accumsan sit amet erat. Vestibulum ac mauris ut nisl maximus porta eu a libero. In hac habitasse platea dictumst. Proin augue urna, pretium vel mauris sed, lobortis rutrum libero.</p>
-                              </div>
-                              <div class="row align-items-center mb-5">
-                                    <div class="col-12 col-md-7 pr-lg-3 pr-xl-5">
-                                          <div class="serve-img text-center">
-                                                <img src="images/img20@2x.png" alt="" class="mw-100 d-inline-block" />
-                                          </div>
-                                    </div>
-                                    <div class="col-12 col-md-5">
-                                          <div class="txt-wrp text-center text-md-left">
-                                                <div class="txt-wrp d-none d-md-block">
-                                                      <h2 class="mb-1 mb-md-2 font-weight-normal">1BrüMate</h2>
-                                                      <p class="mb-1 mb-md-2 mb-lg-3">Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit amet mattis. Ut vel tristique neque. Praesent purus eros, aliquet sit amet venenatis in, sodales in odio. Curabitur ac ligula et purus cursus vulputate accumsan sit amet erat. Vestibulum ac mauris ut nisl maximus porta eu a libero. In hac habitasse platea dictumst. Proin augue urna, pretium vel mauris sed, lobortis rutrum libero.</p>
-                                                </div>
-                                                <div class="d-md-none d-xl-block text-left">
-                                                      <h6 class="mb-1 mb-md-2 font-weight-normal">What Changed</h6>
-                                                      <div class="media mb-2 mb-lg-3">
-                                                            <svg class="mr-15 mr-lg-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <div class="media-body">
-                                                                  <p class="mb-0">Design: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
+                              {caseStudies.nodes.map(
+                                    ({ longDescription, name, logo, images: imagesStudies, data }, idx) => {
+                                          return (idx % 2 !== 0) ? (
+                                                <>
+                                                      <div class="txt-wrp d-block d-md-none text-center">
+                                                            <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
+                                                            <p class="mb-1 mb-md-2 mb-lg-3">{longDescription.longDescription}</p>
+                                                      </div>
+                                                      <div class="row align-items-center">
+                                                            <div class="col-12 col-md-7 order-md-2 pl-lg-3 pl-xl-5">
+                                                                  <div class="serve-img text-center">
+                                                                        <Img fluid={logo[0].fluid} alt="" class="mw-100 d-inline-block" />
+                                                                  </div>
+                                                            </div>
+                                                            <div class="col-12 col-md-5 order-md-1">
+                                                                  <div class="txt-wrp text-center text-md-left">
+                                                                        <div class="txt-wrp d-none d-md-block">
+                                                                              <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
+                                                                              <p class="mb-1 mb-md-2 mb-lg-3">{longDescription.longDescription}</p>
+                                                                        </div>
+                                                                        <div class="d-md-none d-xl-block text-left">
+                                                                              <h6 class="mb-1 mb-md-2 font-weight-normal">{data.title}</h6>
+                                                                              {data.data.map(({ name, value }, idx) => (
+                                                                                    <div class="media mb-2 mb-lg-3">
+                                                                                          {<img src={imagesStudies[idx].file.url} class="mr-2 mr-lg-3" />}
+                                                                                          <div class="media-body">
+                                                                                                <p class="mb-0">{name} <br />{value}</p>
+                                                                                          </div>
+                                                                                    </div>
+                                                                              ))}
+                                                                        </div>
+                                                                        <a href="#" class="btn btn-primary">See Full Case Study</a>
+                                                                  </div>
+                                                            </div>
+                                                            <div class="col-12 d-none d-md-block d-xl-none mt-2 order-md-3">
+                                                                  <h6 class="mb-1 mb-md-2 font-weight-normal">{data.title}</h6>
+                                                                  <div class="row">
+                                                                        {data.data.map(({ name, value }, idx) => (
+                                                                              <div class="col-4">
+                                                                                    <div class="change-blk">
+                                                                                          {<img src={imagesStudies[idx].file.url} class="mb-1" />}
+                                                                                          <p class="mb-0">{name}: <br />{value}</p>
+                                                                                    </div>
+                                                                              </div>
+                                                                        ))}
+                                                                  </div>
                                                             </div>
                                                       </div>
-                                                      <div class="media mb-2 mb-lg-3">
-                                                            <svg class="mr-15 mr-lg-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <div class="media-body">
-                                                                  <p class="mb-0">Tool: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
+                                                </>
+                                          ) : (
+                                                      <>
+                                                            <div class="txt-wrp d-block d-md-none text-center">
+                                                                  <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
+                                                                  <p class="mb-1 mb-md-2 mb-lg-3">{longDescription.longDescription}</p>
                                                             </div>
-                                                      </div>
-                                                      <div class="media mb-2 mb-lg-3">
-                                                            <svg class="mr-15 mr-lg-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <div class="media-body">
-                                                                  <p class="mb-0">Audience Targeting: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <a href="#" class="btn btn-primary">See Full Case Study</a>
-                                          </div>
-                                    </div>
-                                    <div class="col-12 d-none d-md-block d-xl-none mt-2">
-                                          <h6 class="mb-1 mb-md-2 font-weight-normal">What Changed</h6>
-                                          <div class="row">
-                                                <div class="col-4">
-                                                      <div class="change-blk">
-                                                            <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <p class="mb-0">Design: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                      </div>
-                                                </div>
-                                                <div class="col-4">
-                                                      <div class="change-blk">
-                                                            <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <p class="mb-0">Tool: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                      </div>
-                                                </div>
-                                                <div class="col-4">
-                                                      <div class="change-blk">
-                                                            <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <p class="mb-0">Audience Targeting: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
+                                                            <div class="row align-items-center mb-5">
+                                                                  <div class="col-12 col-md-7 pr-lg-3 pr-xl-5">
+                                                                        <div class="serve-img text-center">
+                                                                              <Img fluid={logo[0].fluid} alt="" class="mw-100 d-inline-block" />
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12 col-md-5">
+                                                                        <div class="txt-wrp text-center text-md-left">
+                                                                              <div class="txt-wrp d-none d-md-block">
+                                                                                    <h2 class="mb-1 mb-md-2 font-weight-normal">{name}</h2>
+                                                                                    <p class="mb-1 mb-md-2 mb-lg-3">{longDescription.longDescription}</p>
+                                                                              </div>
+                                                                              <div class="d-md-none d-xl-block text-left">
+                                                                                    <h6 class="mb-1 mb-md-2 font-weight-normal">{data.title}</h6>
+                                                                                    {data.data.map(({ name, value }, idx) => (
+                                                                                          <div class="media mb-2 mb-lg-3">
+                                                                                                {<img src={imagesStudies[idx].file.url} class="mr-2 mr-lg-3" />}
+                                                                                                <div class="media-body">
+                                                                                                      <p class="mb-0">{name} <br />{value}</p>
+                                                                                                </div>
+                                                                                          </div>
+                                                                                    ))}
+                                                                              </div>
+                                                                              <a href="#" class="btn btn-primary">See Full Case Study</a>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-12 d-none d-md-block d-xl-none mt-2">
+                                                                        <h6 class="mb-1 mb-md-2 font-weight-normal">{data.title}</h6>
+                                                                        <div class="row">
+                                                                              {data.data.map(({ name, value }, idx) => (
+                                                                                    <div class="col-4">
+                                                                                          <div class="change-blk">
+                                                                                                {<img src={imagesStudies[idx].file.url} class="mb-1" />}
+                                                                                                <p class="mb-0">{name}: <br />{value}</p>
+                                                                                          </div>
+                                                                                    </div>
+                                                                              ))}
+                                                                        </div>
+                                                                  </div>
 
-                              </div>
-                              <div class="txt-wrp d-block d-md-none text-center">
-                                    <h2 class="mb-1 mb-md-2 font-weight-normal">TopFoxx</h2>
-                                    <p class="mb-1 mb-md-2 mb-lg-3">Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit amet mattis. Ut vel tristique neque. Praesent purus eros, aliquet sit amet venenatis in, sodales in odio. Curabitur ac ligula et purus cursus vulputate accumsan sit amet erat. Vestibulum ac mauris ut nisl maximus porta eu a libero. In hac habitasse platea dictumst. Proin augue urna, pretium vel mauris sed, lobortis rutrum libero.</p>
-                              </div>
-                              <div class="row align-items-center">
-                                    <div class="col-12 col-md-7 order-md-2 pl-lg-3 pl-xl-5">
-                                          <div class="serve-img text-center">
-                                                <img src="images/img21@2x.png" alt="" class="mw-100 d-inline-block" />
-                                          </div>
-                                    </div>
-                                    <div class="col-12 col-md-5 order-md-1">
-                                          <div class="txt-wrp text-center text-md-left">
-                                                <div class="txt-wrp d-none d-md-block">
-                                                      <h2 class="mb-1 mb-md-2 font-weight-normal">TopFoxx</h2>
-                                                      <p class="mb-1 mb-md-2 mb-lg-3">Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit amet mattis. Ut vel tristique neque. Praesent purus eros, aliquet sit amet venenatis in, sodales in odio. Curabitur ac ligula et purus cursus vulputate accumsan sit amet erat. Vestibulum ac mauris ut nisl maximus porta eu a libero. In hac habitasse platea dictumst. Proin augue urna, pretium vel mauris sed, lobortis rutrum libero.</p>
-                                                </div>
-                                                <div class="d-md-none d-xl-block text-left">
-                                                      <h6 class="mb-1 mb-md-2 font-weight-normal">What Changed</h6>
-                                                      <div class="media mb-2 mb-lg-3">
-                                                            <svg class="mr-15 mr-lg-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <div class="media-body">
-                                                                  <p class="mb-0">Design: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
                                                             </div>
-                                                      </div>
-                                                      <div class="media mb-2 mb-lg-3">
-                                                            <svg class="mr-15 mr-lg-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <div class="media-body">
-                                                                  <p class="mb-0">Tool: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                            </div>
-                                                      </div>
-                                                      <div class="media mb-2 mb-lg-3">
-                                                            <svg class="mr-15 mr-lg-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <div class="media-body">
-                                                                  <p class="mb-0">Audience Targeting: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <a href="#" class="btn btn-primary">See Full Case Study</a>
-                                          </div>
-                                    </div>
-                                    <div class="col-12 d-none d-md-block d-xl-none mt-2 order-md-3">
-                                          <h6 class="mb-1 mb-md-2 font-weight-normal">What Changed</h6>
-                                          <div class="row">
-                                                <div class="col-4">
-                                                      <div class="change-blk">
-                                                            <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <p class="mb-0">Design: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                      </div>
-                                                </div>
-                                                <div class="col-4">
-                                                      <div class="change-blk">
-                                                            <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <p class="mb-0">Tool: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                      </div>
-                                                </div>
-                                                <div class="col-4">
-                                                      <div class="change-blk">
-                                                            <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                                                  <rect id="Rectangle_149" data-name="Rectangle 149" width="35" height="35" />
-                                                            </svg>
-                                                            <p class="mb-0">Audience Targeting: <br />Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed</p>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                              </div>
+                                                      </>
+                                                )
+                                    })}
                         </div>
                   </section>
             ),

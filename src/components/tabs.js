@@ -2,6 +2,40 @@ import React, { useState } from "react"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Img from "gatsby-image";
 import sources from "../utils/images";
+import SliderComponent from "../components/slider";
+
+
+const settingsSlider = {
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      autoplaySpeed: 3000,
+      fadeIn: false,
+      autoplay: true,
+      pauseOnHover: false,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      responsive: [
+            {
+                  breakpoint: 1024,
+                  settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true,
+                  },
+            },
+            {
+                  breakpoint: 768,
+                  settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                  },
+            },
+      ],
+};
+
+
 
 const TabsComponent = ({
       tabs
@@ -38,7 +72,9 @@ const TabsComponent = ({
                         image,
                         subTitle,
                         className,
-                        page
+                        page,
+                        images,
+                        data,
                   }) => (
                               <TabPanel className={className}>
                                     {page === 'Home' &&
@@ -219,8 +255,6 @@ const TabsComponent = ({
                                                                               <p class="mb-3 large">{subTitle}</p>
                                                                         </div>
                                                                         {text && <p dangerouslySetInnerHTML={{ __html: text.text }}></p>}
-
-
                                                                         <a href="https://aavya.kinsta.cloud/request-consultation/" class="btn btn-primary">Request Consultation</a>
                                                                   </div>
                                                             </div>
@@ -228,7 +262,20 @@ const TabsComponent = ({
                                                 </div>
                                           </section>
                                     }
-                                    {page === 'cro' && (<></>)}
+                                    {page === 'cro' && (
+                                          <div class="story-carousel mb-3 mb-md-5 mb-lg-7">
+                                                <SliderComponent settingsAsProp={settingsSlider}>
+                                                      {images && images.map(
+                                                            ({ fluid }, idx) => (
+                                                                  <>
+                                                                        <div class="slide-img">
+                                                                              <Img fluid={fluid} alt="" class="w-100 mob-img" />
+                                                                        </div>
+                                                                        <p class="mb-3 large">{data.data[idx].name}</p>
+                                                                  </>
+                                                            ))}
+                                                </SliderComponent>
+                                          </div>)}
                               </TabPanel>
                         ))}
             </Tabs>);

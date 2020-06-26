@@ -4,14 +4,14 @@ import { sections } from '../pagesUtils/cro';
 
 import Layout from "../components/layout";
 
-const gettingJSX = ({ allContentfulSections, allContentfulTabs ,allContentfulSuccessStories, allContentfulSlider }) => {
+const gettingJSX = ({ allContentfulSections, allContentfulTabs, allContentfulCaseStudies, allContentfulSlider }) => {
 
   const jsx = allContentfulSections.edges.map(({ node }) => {
     const nodeToSend = {
       ...node,
       tabs: allContentfulTabs,
       slider: allContentfulSlider.edges,
-      successCases: allContentfulSuccessStories,
+      caseStudies: allContentfulCaseStudies,
     };
 
     const fxnNode = node.cssClass ? sections[node.cssClass] : sections['default'];
@@ -143,43 +143,61 @@ const croPage = () => {
       page
       className
       image {
-        fluid(maxWidth: 1920, quality: 100){
+          fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
-           mobile: fluid(maxWidth: 768, quality: 100){
+          mobile: fluid(maxWidth: 768, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
           desktop: fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
       }
+      images {
+          fluid(maxWidth: 1920, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          mobile: fluid(maxWidth: 768, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          desktop: fluid(maxWidth: 1920, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+      }
+      data {
+          data {
+            name
+          }
+        }
       logo {
         file {
+          url
+        }
+      }
+      images{
+        file{
           url
         }
       }
     }
   }
 
-  allContentfulSuccessStories(sort: {fields: order}) {
+  allContentfulCaseStudies(filter: {page: {eq: "cro"}}, sort: {fields: order}) {
     nodes {
-      actionUrl
-      action
-      description {
-        description
+      longDescription{
+        longDescription
       }
+      page
       name
       order
-      subTitle
-      title
       data {
+        title
         data {
           name
-          number
-          end
+          value
         }
       }
-      image {
+      logo {
         fluid(maxWidth: 2000, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
           }
@@ -191,6 +209,23 @@ const croPage = () => {
           }
         desktop: fluid(maxWidth: 1920, quality: 100){
             ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+      }
+      images {
+        fluid(maxWidth: 2000, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+        mobile: fluid(maxWidth: 768, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          tablet: fluid(maxWidth: 1280, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+        desktop: fluid(maxWidth: 1920, quality: 100){
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+          file{
+            url
           }
       }
     }
