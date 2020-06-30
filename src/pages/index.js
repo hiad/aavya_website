@@ -140,7 +140,7 @@ const IndexPage = () => {
     }
   }
 
-  allContentfulCaseStudies (sort: {fields: order}) {
+  allContentfulCaseStudies (filter: {page: {eq: "Home"}}) {
     nodes {
       name
       description
