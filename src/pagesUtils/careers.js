@@ -180,12 +180,11 @@ const sections = {
                                                                   <strong>Jobs</strong>
                                                                   <strong>Category</strong>
                                                             </div>
-                                                            {console.log(jobs.edges)}
                                                             {
-                                                                  jobs.edges.map(({node: {position, category}}) => (
+                                                                  jobs && jobs.edges.map(({node}) => (
                                                                         <div class="fj-box">
-                                                                              <strong>{position}</strong>
-                                                                              <span>{category}</span>
+                                                                              <strong>{node.position}</strong>
+                                                                              <span>{node.category}</span>
                                                                         </div>
                                                                   ))
                                                             }
