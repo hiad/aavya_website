@@ -5,7 +5,7 @@ import sources from "../utils/images";
 import SliderComponent from "../components/slider";
 
 
-const settingsSlider = {
+const settingsDefault = {
       dots: true,
       infinite: true,
       speed: 1000,
@@ -13,14 +13,14 @@ const settingsSlider = {
       fadeIn: false,
       autoplay: true,
       pauseOnHover: false,
-      slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToShow: 1,
+      slidesToScroll: 1,
       responsive: [
             {
                   breakpoint: 1024,
                   settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
                         infinite: true,
                         dots: true,
                   },
@@ -38,7 +38,8 @@ const settingsSlider = {
 
 
 const TabsComponent = ({
-      tabs
+      tabs,
+      settingsSlider = settingsDefault
 }) => {
       const [tab, setTab] = useState(0);
       const [open, setOpen] = useState(false);
@@ -61,7 +62,7 @@ const TabsComponent = ({
                         }) => (
                                     <Tab>
                                           {logo && <img src={logo.file.url} alt="" />}
-                                          <span className={['services', 'cro'].includes(pageClassName) && 'isBlack'} dangerouslySetInnerHTML={{ __html: tab }}></span>
+                                          <span className={['services', 'cro', 'lifestyle'].includes(pageClassName) && 'isBlack'} dangerouslySetInnerHTML={{ __html: tab }}></span>
                                     </Tab>
                               ))}
                   </TabList>
@@ -140,8 +141,6 @@ const TabsComponent = ({
                                                                               <p class="mb-3 large">{subTitle}</p>
                                                                         </div>
                                                                         {text && <p dangerouslySetInnerHTML={{ __html: text.text }}></p>}
-
-
                                                                         <a href="https://aavya.kinsta.cloud/request-consultation/" class="btn btn-primary">Request Consultation</a>
                                                                   </div>
                                                             </div>
@@ -262,7 +261,7 @@ const TabsComponent = ({
                                                 </div>
                                           </section>
                                     }
-                                    {page === 'cro' && (
+                                    {['cro', 'lifestyle'].includes(page) && (
                                           <div class="story-carousel mb-3 mb-md-5 mb-lg-7">
                                                 <SliderComponent settingsAsProp={settingsSlider}>
                                                       {images && images.map(
@@ -271,7 +270,7 @@ const TabsComponent = ({
                                                                         <div class="slide-img">
                                                                               <Img fluid={fluid} alt="" class="w-100 mob-img" />
                                                                         </div>
-                                                                        <p class="mb-3 large">{data.data[idx].name}</p>
+                                                                        {data && (<p class="mb-3 large">{data.data[idx].name}</p>)}
                                                                   </>
                                                             ))}
                                                 </SliderComponent>

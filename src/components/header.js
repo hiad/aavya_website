@@ -20,7 +20,7 @@ const Header = () => {
             <li><Link to="/about">About</Link></li>
             <li><Link to="#">Solutions </Link>
             </li>
-            <li><Link to="#">Case Studies </Link>
+            <li><Link to="/ourcasestudies">Case Studies </Link>
             </li>
             <li><Link to="#">Client</Link></li>
             <li><Link to="#">Contact</Link></li>
@@ -51,7 +51,7 @@ const Header = () => {
               <NavLink href="/components/">Solutions</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Case Studies</NavLink>
+              <NavLink href="/ourcasestudies">Case Studies</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/">Client</NavLink>
